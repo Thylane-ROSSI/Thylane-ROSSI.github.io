@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Portfolio - Thylane Rossi</title>
-</head>
-<body style="font-family: Arial; text-align: center; margin-top: 50px;">
-    <h1>Thylane ROSSI</h1>
-    <p>Bienvenue sur mon portfolio. Voici mes projets :</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thylane Rossi - Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .header-title {
+      text-align: right;
+    }
+    .header-title h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
+    .header-title p { font-size: 1rem; opacity: 0.85; }
     
-    <a href="LIEN_VERS_TON_REPLIT_PENDU" target="_blank">
-        <button style="padding: 10px; background-color: #2ea44f; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Tester mon programme
-        </button>
+    main { max-width: 900px; margin: 4rem auto; padding: 0 1.5rem; }
+    
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .hub-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hub-card:hover { 
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+    }
+    .hub-icon { font-size: 4rem; margin-bottom: 1rem; }
+    .hub-card h2 { color: #1a365d; margin-bottom: 0.5rem; }
+    .hub-card p { color: #4a5568; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-name">THYLANE ROSSI</div>
+  <div class="header-title">
+    <h1>Portfolio Étudiant Licence Mathémaitques-Informatique</h1>
+    <p>Université Claude Bernard Lyon 1</p>
+  </div>
+</header>
+
+<main>
+  <div class="hub-grid">
+    <a href="licence.html" class="hub-card">
+      <div class="hub-icon">🎓</div>
+      <h2>Ma Licence d'Informatique</h2>
+      <p>Découvrez mes projets académiques, mon parcours à Lyon 1 et à Toronto durant mon échange universitaire, et le détail de mes enseignements.</p>
     </a>
+
+    <a href="riemann.html" class="hub-card">
+      <div class="hub-icon">🌌</div>
+      <h2>The Riemann-Dyson AI Oracle</h2>
+      <p>Projet de recherche croisant Machine Learning, Chaos Quantique et la Théorie des Nombres (Fonction Zêta).</p>
+    </a>
+  </div>
+</main>
+
 </body>
 </html>
