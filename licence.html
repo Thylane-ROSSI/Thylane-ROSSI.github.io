@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Licence Mathématiques-Informatique - Thylane Rossi</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    /* Bouton retour accueil */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+    
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .projects-section, .year-section { margin-bottom: 3rem; }
+    h2.section-title {
+      font-size: 1.5rem;
+      color: #2b6cb0;
+      border-bottom: 3px solid #2b6cb0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Style Projets */
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.4rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: box-shadow 0.2s;
+    }
+    .project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.14); }
+    .project-icon { font-size: 2.2rem; flex-shrink: 0; }
+    .project-info h3 { font-size: 1.05rem; color: #1a365d; margin-bottom: 0.3rem; }
+    .project-info p { font-size: 0.9rem; color: #4a5568; }
+    .tag {
+      display: inline-block;
+      background: #e2e8f0;
+      color: #4a5568;
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+      font-size: 0.78rem;
+      margin: 0.2rem 0.2rem 0 0;
+    }
+
+    /* Style Notes & Matières */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.14); }
+    
+    .subject-link {
+      text-decoration: none;
+      color: #1a365d;
+      transition: color 0.2s;
+    }
+    .subject-link:hover {
+      color: #4299e1; 
+    }
+    .card h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    
+    .card .grade {
+      display: inline-block;
+      background: #ebf8ff;
+      color: #2b6cb0; 
+      border-radius: 20px;
+      padding: 0.15rem 0.7rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #718096;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn">← Accueil</a>
+  <h1>Licence Mathématiques-Informatique</h1>
+  <p>Université Claude Bernard Lyon 1 & Toronto Metropolitan University</p>
+</header>
+
+<main>
+  <section class="projects-section">
+    <h2 class="section-title">Projets réalisés</h2>
+
+    <div class="project-card">
+      <div class="project-icon">♟️</div>
+      <div class="project-info">
+        <h3>Jeu d'Échecs – L3</h3>
+        <p>Implémentation complète d'un jeu d'échecs avec interface graphique, règles du jeu et menu principal.</p>
+        <span class="tag">Java</span> <span class="tag">MVC</span> <span class="tag">Swing</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🪢</div>
+      <div class="project-info">
+        <h3>Pendu – L3</h3>
+        <p>Jeu du pendu avec plusieurs niveaux d'IA (facile, moyen, difficile) exploitant une structure GADDAG.</p>
+        <span class="tag">C++</span> <span class="tag">SFML</span> <span class="tag">IA</span>
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="project-icon">🎲</div>
+      <div class="project-info">
+        <h3>Monopoly – L2</h3>
+        <p>Simulation du jeu de Monopoly en ligne de commande avec gestion de plusieurs joueurs.</p>
+        <span class="tag">C++</span> <span class="tag">POO</span>
+      </div>
+    </div>
+  </section>
+
+<section class="year-section">
+    <h2 class="section-title">Troisième année : 2024 – 2025</h2>
+    <div class="card-grid">
+      <div class="card">
+        <a href="https://continuing.torontomu.ca/search/publicCourseSearchDetails.do?method=load&courseId=24607" target="_blank" class="subject-link"><h3>Database System <small>(TMU)</small></h3></a>
+        <span class="grade">20.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://continuing.torontomu.ca/search/publicCourseSearchDetails.do?method=load&courseId=24727" target="_blank" class="subject-link"><h3>Computer Security <small>(TMU)</small></h3></a>
+        <span class="grade">18.35 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://www.torontomu.ca/calendar/2025-2026/courses/computer-science/CPS/571/" target="_blank" class="subject-link"><h3>Intro to Cyber-Security <small>(TMU)</small></h3></a>
+        <span class="grade">15.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://www.torontomu.ca/calendar/2025-2026/courses/mathematics/MTH/814/" target="_blank" class="subject-link"><h3>Computational Complexity <small>(TMU)</small></h3></a>
+        <span class="grade">15.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://www.torontomu.ca/calendar/2025-2026/courses/communication/CMN/306/" target="_blank" class="subject-link"><h3>Risk & Crisis Communication <small>(TMU)</small></h3></a>
+        <span class="grade">15.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-292-323/lif9-:-algorithmique,-programmation-et-complexite.html" target="_blank" class="subject-link"><h3>Algo, Programmation Et Complexité</h3></a>
+        <span class="grade">17.49 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-25760-12/stage-de-decouverte-de-l'informatique-en-entreprises.html" target="_blank" class="subject-link"><h3>Stage De Découverte (SNCF)</h3></a>
+        <span class="grade">15.56 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-295-12%2Falgorithmique-et-programmation-orientee-objet.html" target="_blank" class="subject-link"><h3>Algo et programmation orientée objet</h3></a>
+        <span class="grade">13.01 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/%2Fue-25757-1224%2Fprogrammation-concurrente-et-administration-systeme.html" target="_blank" class="subject-link"><h3>Prog Concurrente & Admin Système</h3></a>
+        <span class="grade">12.70 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-25759-12/reseaux-systemes-securite-par-la-pratique.html" target="_blank" class="subject-link"><h3>Réseaux, Systèmes, Sécurité</h3></a>
+        <span class="grade">12.35 / 20</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="year-section">
+    <h2 class="section-title">Deuxième année : 2023 – 2024</h2>
+    <div class="card-grid">
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-8211-323/analyse-matricielle-et-algebre-lineaire-appliquee-a.html" target="_blank" class="subject-link"><h3>Analyse matricielle et algèbre linéaire</h3></a>
+        <span class="grade">17.53 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/%2Fue-16426-12%2Fstatistiques-pour-l%27informatique.html" target="_blank" class="subject-link"><h3>Statistiques pour l'informatique</h3></a>
+        <span class="grade">16.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-26134/architecture-des-ordinateurs.html" target="_blank" class="subject-link"><h3>Architecture des ordinateurs</h3></a>
+        <span class="grade">15.94 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-4002-323%2Fprogrammation-logique.html" target="_blank" class="subject-link"><h3>Programmation logique</h3></a>
+        <span class="grade">15.85 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-25557-5/algorithmique-programmation-et-structures-de-donnees.html" target="_blank" class="subject-link"><h3>Algo, prog et structures de données</h3></a>
+        <span class="grade">14.33 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-27244-13/interactions-humain-machine-et-ergonomie.html" target="_blank" class="subject-link"><h3>IHM et ergonomie</h3></a>
+        <span class="grade">14.07 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-17687/base-de-donnees-et-programmation-web.html" target="_blank" class="subject-link"><h3>Bases de données & Prog web</h3></a>
+        <span class="grade">14.05 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16372-12/systeme-d'exploitation.html" target="_blank" class="subject-link"><h3>Système d'exploitation</h3></a>
+        <span class="grade">13.93 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-8157-12/conception-et-developpement-d'applications.html" target="_blank" class="subject-link"><h3>Conception d'applications</h3></a>
+        <span class="grade">13.7 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/%2Fue-26078-1224%2Fprogrammation-fonctionnelle.html" target="_blank" class="subject-link"><h3>Programmation fonctionnelle</h3></a>
+        <span class="grade">8.73 / 20</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="year-section">
+    <h2 class="section-title">Première année : 2022 – 2023</h2>
+    <div class="card-grid">
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16358-12%2Fapplications-en-mathematiques-et-informatique.html" target="_blank" class="subject-link"><h3>Applications en maths et info</h3></a>
+        <span class="grade">20.0 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16359-323%2Falgorithmique-et-programmation-recursive.html" target="_blank" class="subject-link"><h3>Algo et programmation récursive</h3></a>
+        <span class="grade">18.84 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/%2Fue-24750-1394%2Falgebre-2.html" target="_blank" class="subject-link"><h3>Algèbre 2</h3></a>
+        <span class="grade">18.26 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-24754-934/analyse-2-pour-informaticiens.html" target="_blank" class="subject-link"><h3>Analyse 2 pour informaticiens</h3></a>
+        <span class="grade">17.14 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/%2Fue-24749-1655%2Falgebre-1.html" target="_blank" class="subject-link"><h3>Algèbre 1</h3></a>
+        <span class="grade">16.9 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-24752-934/analyse-1-pour-informaticiens.html" target="_blank" class="subject-link"><h3>Analyse 1 pour informaticiens</h3></a>
+        <span class="grade">16.55 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16360-321%2Funix.html" target="_blank" class="subject-link"><h3>Unix</h3></a>
+        <span class="grade">16.24 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16361-321%2Fintroduction-aux-reseaux-et-au-web.html" target="_blank" class="subject-link"><h3>Intro aux réseaux et au web</h3></a>
+        <span class="grade">15.44 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16357-28%2Falgorithmique-programmation-imperative-initiation.html" target="_blank" class="subject-link"><h3>Algo et programmation impérative</h3></a>
+        <span class="grade">14.52 / 20</span>
+      </div>
+      <div class="card">
+        <a href="https://offre-de-formations.univ-lyon1.fr/ue-16362-321%2Fbases-de-l%27architecture-pour-la-programmation.html" target="_blank" class="subject-link"><h3>Bases de l'architecture (Prog)</h3></a>
+        <span class="grade">13.25 / 20</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer><p>Portfolio – Thylane Rossi · Université Claude Bernard Lyon 1</p></footer>
+</body>
+</html>
