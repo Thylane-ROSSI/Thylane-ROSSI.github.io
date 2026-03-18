@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Génération de Terrain Aléatoire - Thylane Rossi</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    .action-bar {
+      text-align: center;
+      margin: 2rem 0 2rem 0;
+    }
+    .btn-git {
+      text-decoration: none;
+      padding: 12px 25px;
+      background: #2d3748;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .btn-git:hover { transform: translateY(-2px); }
+
+    main { max-width: 850px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .content-box {
+      background: white;
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    
+    h2 {
+      color: #2b6cb0;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    h2:first-child { margin-top: 0; }
+    h3 {
+      color: #1a365d;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+    
+    p, ul, ol { margin-bottom: 1rem; }
+    ul, ol { margin-left: 2rem; }
+    li { margin-bottom: 0.4rem; }
+    
+    /* Galerie pour les 3 images */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .gallery-item {
+      flex: 1;
+      min-width: 220px;
+      max-width: 32%;
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .caption {
+      font-size: 0.85rem;
+      color: #718096;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="licence.html" class="back-btn">← Retour aux projets</a>
+  <h1>Génération de Terrain Aléatoire</h1>
+  <p>Mini-projet de L1 : C++, Algorithmique et Bruit de Perlin</p>
+</header>
+
+<div class="action-bar">
+  <a href="https://github.com/Thylane-ROSSI/ProjetsLicence/tree/master/G%C3%A9n%C3%A9ration%20de%20terrain%20al%C3%A9atoire%20-%20L1" target="_blank" class="btn-git">
+    📂 Voir le code source sur GitHub
+  </a>
+</div>
+
+<main>
+  <div class="content-box">
+    
+    <h2>Présentation du Projet</h2>
+    <p>Réalisé en première année de licence, ce mini-projet en C++ (développé avec Code::Blocks et la bibliothèque Grapic) explore la génération procédurale de paysages. L'objectif était de créer des environnements variés et réalistes à l'aide de l'algorithme du <strong>Bruit de Perlin</strong>, et d'y intégrer une boucle de jeu dynamique.</p>
+    
+    <h2>Mécaniques de Jeu</h2>
+    <p>Le joueur contrôle un personnage devant naviguer dans des mondes générés aléatoirement avec un objectif simple mais à difficulté croissante :</p>
+    <ul>
+      <li><strong>Objectif :</strong> Collecter 30 pièces (cercles jaunes) dispersées dans le niveau.</li>
+      <li><strong>Obstacles :</strong> Éviter les particules ennemies (cercles rouges) qui se déplacent aléatoirement. Le jeu gère la friction et le déplacement dynamique des entités.</li>
+    </ul>
+
+    <h3>Les Biomes (Niveaux)</h3>
+    <p>Le jeu propose trois niveaux de difficulté, chacun générant un écosystème unique grâce au paramétrage du bruit de Perlin :</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Plaine_Niveau_1.png" alt="Niveau 1 : Plaine">
+        <div class="caption">Niveau 1 : Plaine (1 obstacle)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Désert_Niveau_2.png" alt="Niveau 2 : Désert">
+        <div class="caption">Niveau 2 : Désert (2 obstacles)</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Neige_Niveau_3.png" alt="Niveau 3 : Neige">
+        <div class="caption">Niveau 3 : Neige (3 obstacles)</div>
+      </div>
+    </div>
+
+    <h2>Architecture et Code</h2>
+    <p>L'architecture du code a été structurée autour de plusieurs entités pour séparer la logique du jeu du rendu graphique :</p>
+    <ul>
+      <li><strong>Gestion physique :</strong> Une structure <code>Complex</code> gère les positions et les forces appliquées aux entités.</li>
+      <li><strong>Génération du monde :</strong> Les structures <code>Altitude</code>, <code>Couleur</code> et <code>Montagne</code> définissent la topologie du terrain généré procéduralement via la fonction <code>mondeInit</code>.</li>
+      <li><strong>Boucle de jeu :</strong> La fonction <code>update</code> gère la mise à jour de l'état du jeu à chaque itération (déplacements, friction, collisions), tandis que la fonction <code>mondeDraw</code> s'occupe du rendu visuel, incluant un dégradé de fond dynamique.</li>
+    </ul>
+
+  </div>
+</main>
+
+</body>
+</html>
