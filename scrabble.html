@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solveur de Scrabble en C++ - Thylane Rossi</title>
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔤</text></svg>">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    
+    /* En-tête */
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    /* Bouton GitHub */
+    .action-bar {
+      text-align: center;
+      margin: 2rem 0 2rem 0;
+    }
+    .btn-git {
+      text-decoration: none;
+      padding: 12px 25px;
+      background: #2d3748;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .btn-git:hover { transform: translateY(-2px); }
+
+    /* Contenu principal style README */
+    main { max-width: 850px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .content-box {
+      background: white;
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    
+    h2 {
+      color: #2b6cb0;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    h2:first-child { margin-top: 0; }
+    h3 {
+      color: #1a365d;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+    
+    p, ul { margin-bottom: 1rem; }
+    ul { margin-left: 2rem; }
+    li { margin-bottom: 0.4rem; }
+    
+    /* Blocs de code */
+    code {
+      background: #edf2f7;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      color: #c53030;
+    }
+    .code-block {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      margin-bottom: 1rem;
+      overflow-x: auto;
+    }
+    
+    /* Gestion des images */
+    .image-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #718096;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="licence.html" class="back-btn">← Retour aux projets</a>
+  <h1>Solveur de Scrabble en C++</h1>
+  <p>Projet de L3 : Algorithmique Avancée et Structures de Données</p>
+</header>
+
+<div class="action-bar">
+  <a href="https://github.com/Thylane-ROSSI/ProjetsLicence/tree/master/Scrabble%20-%20L3" target="_blank" class="btn-git">
+    📂 Voir le code source sur GitHub
+  </a>
+</div>
+
+<main>
+  <div class="content-box">
+    
+    <h2>Introduction</h2>
+    <p>Le but de ce projet est la programmation d'un joueur automatique au Scrabble, capable de déterminer le coup rapportant le plus de points étant donné un plateau de jeu, l'ensemble des lettres du joueur, et un dictionnaire de mots valides.</p>
+    
+    <div class="image-container">
+      <img src="solver.gif" alt="Démonstration du solveur de Scrabble en ligne de commande">
+      <div class="caption">Démonstration du calcul du meilleur coup sur le plateau</div>
+    </div>
+
+    <h2>Structure de Données : Le GADDAG</h2>
+    <p>L'efficacité de ce projet repose sur l'implémentation de la structure de données <strong>GADDAG</strong> (Generalized Acyclic Directed Acyclic Graph). Elle permet de déterminer très rapidement, à partir d'un point de départ sur le plateau, tous les mots qui peuvent être ajoutés en passant par ce point.</p>
+    
+    <h3>Insertion et Recherche</h3>
+    <ul>
+      <li><strong>Insertion :</strong> L'insertion d'un mot se fait lettre par lettre. Si une arête correspondant à une lettre n'existe pas, un nouveau nœud est créé. Le nœud terminal marque la fin d'un mot valide.</li>
+      <li><strong>Recherche par le milieu :</strong> Le GADDAG est particulièrement adapté au Scrabble car il permet de chercher des mots en partant d'une lettre déjà présente sur le plateau, puis d'explorer dans les deux directions (horizontale et verticale).</li>
+    </ul>
+
+    <div class="image-container">
+      <img src="exemple_arbre.png" alt="Exemple d'arbre GADDAG">
+      <div class="caption">Représentation schématique de l'arbre GADDAG</div>
+    </div>
+
+    <h2>Fonctionnalités Principales</h2>
+    <ul>
+      <li><strong>Gestion du Sac de Lettres :</strong> Le programme gère un sac contenant les lettres et leurs valeurs en points, avec une probabilité de tirage proportionnelle à leur fréquence d'apparition.</li>
+      <li><strong>Main du Joueur :</strong> Gestion des 7 lettres du joueur, avec un système de recharge automatique à chaque tour depuis le sac de lettres.</li>
+      <li><strong>Calcul du Meilleur Coup :</strong> Le programme évalue toutes les options de jeu possibles et détermine le coup maximisant le score, en s'assurant que le mot croise les mots existants conformément aux règles.</li>
+    </ul>
+
+    <h2>Architecture du Projet</h2>
+    <p>Le code est structuré de manière modulaire en C++ avec l'utilisation de CMake pour la compilation :</p>
+    <ul>
+      <li><strong>Board :</strong> Gère l'état et l'affichage du plateau de jeu.</li>
+      <li><strong>Gaddag :</strong> Encapsule la logique de l'arbre de dictionnaire et les algorithmes de recherche.</li>
+      <li><strong>Player & Joueur :</strong> Représentent les entités jouant la partie, la gestion de leur score et de leurs lettres.</li>
+      <li><strong>Sac :</strong> Gère la distribution aléatoire des lettres restantes.</li>
+    </ul>
+
+    <h2>Compilation et Exécution</h2>
+    <p>Ce projet utilise <strong>CMake</strong> et nécessite un compilateur C++ standard.</p>
+    
+    <div class="code-block">
+# Configuration et compilation
+mkdir build
+cd build
+cmake ..
+make
+
+# Lancement du programme
+./test_board
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
