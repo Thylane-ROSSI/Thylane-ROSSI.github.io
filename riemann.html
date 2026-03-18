@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Riemann-Dyson AI Oracle - Thylane Rossi</title>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    /* Design calqué sur ta page Licence pour une cohérence parfaite */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    /* Bouton retour (Haut Gauche) */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+    /* Bouton Langue (Haut Droite) */
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #1a365d;
+      background: white;
+      border: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover { background: #e2e8f0; }
+    
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    /* Boutons d'action (GitHub / Replit) */
+    .action-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      margin-top: -1rem;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-git {
+      background: #2d3748;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .btn-replit {
+      background: #2b6cb0;
+      color: white;
+      box-shadow: 0 4px 6px rgba(43, 108, 176, 0.2);
+    }
+
+    /* Sections de contenu */
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    .content-section h2 {
+      font-size: 1.5rem;
+      color: #2b6cb0;
+      border-bottom: 3px solid #2b6cb0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+    .content-section p, .content-section ul { margin-bottom: 1rem; }
+    .content-section ul { margin-left: 2rem; }
+    
+    /* Images */
+    .graph-grid {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .graph-item {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .graph-item img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 0.5rem;
+    }
+    .graph-caption { font-size: 0.9rem; color: #718096; font-style: italic; }
+
+    /* Gestion des langues */
+    .fr { display: none; }
+    body.lang-fr .en { display: none; }
+    body.lang-fr .fr { display: block; }
+    span.fr { display: none; }
+    body.lang-fr span.fr { display: inline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn">
+    <span class="en">← Home</span>
+    <span class="fr">← Accueil</span>
+  </a>
+  <button id="langToggle" class="lang-btn">FR</button>
+  
+  <h1>The Riemann-Dyson AI Oracle</h1>
+  <p class="en">Bridging Random Matrix Theory, Number Theory, and Deep Learning.</p>
+  <p class="fr">À la croisée de la théorie des matrices aléatoires, de la théorie des nombres et du Deep Learning.</p>
+</header>
+
+<main>
+  
+  <div class="action-bar">
+    <a href="https://github.com/Thylane-ROSSI/Riemann-Dyson-ai" target="_blank" class="btn btn-git">
+      <span class="en">View Git Repository</span>
+      <span class="fr">Voir le dépôt Git</span>
+    </a>
+    <a href="LIEN_VERS_TON_REPLIT" target="_blank" class="btn btn-replit">
+      <span class="en">Test code on Replit</span>
+      <span class="fr">Tester le code sur Replit</span>
+    </a>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">Theoretical Background</span>
+      <span class="fr">Contexte Théorique</span>
+    </h2>
+    <div class="en">
+      <p>The ultimate goal of this project is to train a neural network to distinguish between quantum chaos (energy levels of heavy nuclei) and mathematical chaos (zeros of the Riemann Zeta function), and to use Explainable AI to interpret the model's decision boundaries.</p>
+      <p>In the 1970s, physicist Freeman Dyson and mathematician Hugh Montgomery made a discovery: the equations describing the energy levels of complex, heavy atoms perfectly matched the equations describing the distribution of prime numbers.</p>
+      <ul>
+        <li><strong>The Physical Side (GUE):</strong> Heavy atoms are simulated using the Gaussian Unitary Ensemble (random matrices filled with complex noise).</li>
+        <li><strong>The Mathematical Side (Riemann):</strong> The non-trivial zeros of the Riemann Zeta function dictate the distribution of prime numbers.</li>
+      </ul>
+      <p><strong>The AI Challenge:</strong> If the statistics are theoretically identical, can a modern Deep Learning model find a hidden pattern to tell them apart?</p>
+    </div>
+    <div class="fr">
+      <p>Le but ultime de ce projet est d'entraîner un réseau de neurones à distinguer le chaos quantique (niveaux d'énergie des noyaux lourds) du chaos mathématique (zéros de la fonction Zêta de Riemann), et d'utiliser l'IA explicable (XAI) pour interpréter les décisions du modèle.</p>
+      <p>Dans les années 1970, le physicien Freeman Dyson et le mathématicien Hugh Montgomery ont fait une découverte majeure : les équations décrivant les niveaux d'énergie des atomes lourds correspondent parfaitement aux équations décrivant la distribution des nombres premiers.</p>
+      <ul>
+        <li><strong>Côté Physique (GUE) :</strong> Les atomes lourds sont simulés via l'Ensemble Unitaire Gaussien (des matrices aléatoires remplies de bruit complexe).</li>
+        <li><strong>Côté Mathématique (Riemann) :</strong> Les zéros non triviaux de la fonction Zêta dictent la répartition des nombres premiers.</li>
+      </ul>
+      <p><strong>Le défi de l'IA :</strong> Si les statistiques sont théoriquement identiques, un modèle de Deep Learning moderne peut-il trouver un motif caché pour les différencier ?</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">Phase 1: Building the Physics Baseline</span>
+      <span class="fr">Phase 1 : La base physique (Chaos Quantique)</span>
+    </h2>
+    <div class="en">
+      <p>We generate large random Hermitian matrices using complex Gaussian noise to simulate chaotic quantum systems. Extracting their eigenvalues yields the raw energy levels, forming the <strong>Wigner Semicircle Law</strong>.</p>
+      <p>To study local fluctuations, we apply a non-linear transformation (unfolding) to normalize the mean level spacing. The resulting distribution perfectly matches the <strong>Wigner Surmise</strong>, demonstrating "Quantum Level Repulsion" (energy levels refuse to overlap).</p>
+    </div>
+    <div class="fr">
+      <p>Nous générons de grandes matrices hermitiennes aléatoires pour simuler des systèmes quantiques chaotiques. L'extraction de leurs valeurs propres fournit les niveaux d'énergie bruts, formant la <strong>Loi du demi-cercle de Wigner</strong>.</p>
+      <p>Pour étudier les fluctuations locales, nous appliquons une transformation non linéaire (le "dépliage") pour normaliser l'espacement moyen. La distribution qui en résulte correspond parfaitement à la <strong>Conjecture de Wigner</strong>, démontrant la "Répulsion des niveaux quantiques" (les niveaux d'énergie refusent de se chevaucher).</p>
+    </div>
+    
+    <div class="graph-grid">
+      <div class="graph-item">
+        <img src="wigner_semicircle.png" alt="Wigner Semicircle Law">
+        <div class="graph-caption">
+          <span class="en">Global Density: Wigner Semicircle Law</span>
+          <span class="fr">Densité Globale : Loi du demi-cercle de Wigner</span>
+        </div>
+      </div>
+      <div class="graph-item">
+        <img src="wigner_surmise.png" alt="Wigner Surmise">
+        <div class="graph-caption">
+          <span class="en">Local Fluctuations: Quantum Level Repulsion</span>
+          <span class="fr">Fluctuations Locales : Répulsion des niveaux</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">Phase 2: The Mathematical Baseline (Riemann Zeta)</span>
+      <span class="fr">Phase 2 : La base mathématique (Zêta de Riemann)</span>
+    </h2>
+    <div class="en">
+      <p>We utilize high-precision datasets containing the heights of the first 100,000 non-trivial zeros of the Riemann Zeta function. We unfold these zeros using the leading asymptotic term of the Riemann-von Mangoldt counting function:</p>
+      <p style="text-align: center; margin: 1.5rem 0;">$$x_i = \frac{\gamma_i}{2\pi} \left( \ln\left(\frac{\gamma_i}{2\pi}\right) - 1 \right)$$</p>
+      <p>When we plot the spacing between these unfolded zeros, we witness the exact same "Quantum Level Repulsion" as seen in the physics matrices.</p>
+    </div>
+    <div class="fr">
+      <p>Nous utilisons des jeux de données de haute précision contenant les hauteurs des 100 000 premiers zéros non triviaux de la fonction Zêta. Nous "déplions" ces zéros en utilisant le terme asymptotique principal de la formule de Riemann-von Mangoldt :</p>
+      <p style="text-align: center; margin: 1.5rem 0;">$$x_i = \frac{\gamma_i}{2\pi} \left( \ln\left(\frac{\gamma_i}{2\pi}\right) - 1 \right)$$</p>
+      <p>En traçant l'espacement entre ces zéros dépliés, nous observons exactement la même "Répulsion" que celle constatée dans les matrices de physique quantique.</p>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-item" style="max-width: 500px; margin: 0 auto;">
+        <img src="riemann_surmise.png" alt="Riemann Zeros Spacing">
+        <div class="graph-caption">
+          <span class="en">Riemann Zeros Local Fluctuations</span>
+          <span class="fr">Fluctuations locales des zéros de Riemann</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Script de gestion du bouton bilingue
+  const langToggle = document.getElementById('langToggle');
+  const body = document.body;
+
+  langToggle.addEventListener('click', () => {
+    if (body.classList.contains('lang-fr')) {
+      body.classList.remove('lang-fr');
+      langToggle.textContent = 'FR'; 
+    } else {
+      body.classList.add('lang-fr');
+      langToggle.textContent = 'EN'; 
+    }
+  });
+</script>
+
+</body>
+</html>
