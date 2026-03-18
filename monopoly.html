@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monopoly Lyon 1 (C++) - Thylane Rossi</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎲</text></svg>">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    .action-bar {
+      text-align: center;
+      margin: 2rem 0 2rem 0;
+    }
+    .btn-git {
+      text-decoration: none;
+      padding: 12px 25px;
+      background: #2d3748;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .btn-git:hover { transform: translateY(-2px); }
+
+    main { max-width: 850px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .content-box {
+      background: white;
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    
+    h2 {
+      color: #2b6cb0;
+      border-bottom: 2px solid #edf2f7;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    h2:first-child { margin-top: 0; }
+    h3 {
+      color: #1a365d;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+    
+    p, ul, ol { margin-bottom: 1rem; }
+    ul, ol { margin-left: 2rem; }
+    li { margin-bottom: 0.4rem; }
+    
+    code {
+      background: #edf2f7;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      color: #c53030;
+    }
+    
+    .image-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #718096;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="licence.html" class="back-btn">← Retour aux projets</a>
+  <h1>Monopoly "Lyon 1"</h1>
+  <p>Projet de L2 : C++, SDL2 et Programmation Orientée Objet</p>
+</header>
+
+<div class="action-bar">
+  <a href="https://github.com/Thylane-ROSSI/ProjetsLicence/tree/master/Monopoly%20-%20L2" target="_blank" class="btn-git">
+    📂 Voir le code source sur GitHub
+  </a>
+</div>
+
+<main>
+  <div class="content-box">
+    
+    <h2>Présentation du Projet</h2>
+    <p>Ce projet consiste en la création d'une version numérique du célèbre jeu de société Monopoly en utilisant le langage C++. La particularité de notre implémentation est la personnalisation locale : les noms de rues traditionnels ont été remplacés par les bâtiments et amphithéâtres de l'Université Claude Bernard Lyon 1, offrant ainsi une expérience familière aux étudiants.</p>
+    
+    <div class="image-container">
+      <img src="image_jeu.jpg" alt="Plateau de jeu du Monopoly Lyon 1">
+      <div class="caption">Interface graphique du jeu avec le plateau et les informations des joueurs</div>
+    </div>
+
+    <h2>Fonctionnalités et Mécaniques</h2>
+    <p>L'application supporte des parties de 2 à 4 joueurs et intègre les mécaniques classiques du jeu :</p>
+    <ul>
+      <li><strong>Gestion immobilière :</strong> Achat de propriétés, de gares et de services publics. Construction de maisons et d'hôtels.</li>
+      <li><strong>Transactions :</strong> Paiement de loyers dynamiques en fonction des possessions de l'adversaire (groupes complets, nombre de bâtiments).</li>
+      <li><strong>Cartes spéciales :</strong> Implémentation complète des systèmes de cartes "Chance" et "Caisse de Communauté" adaptées au thème universitaire.</li>
+      <li><strong>Événements :</strong> Gestion des taxes, des impôts sur le revenu, et des règles de mise en prison.</li>
+    </ul>
+
+    <h2>Technologies Utilisées</h2>
+    <p>Le projet repose sur plusieurs bibliothèques externes nécessitant une gestion fine lors de la compilation :</p>
+    <ul>
+      <li><strong>SDL2 (et SDL2_mixer) :</strong> Utilisée pour le rendu graphique du plateau, des animations (lecture séquentielle de fichiers BMP pour les lancers de dés) et la gestion de la musique de fond.</li>
+      <li><strong>GTKmm :</strong> Bibliothèque C++ pour interfaces graphiques, utilisée spécifiquement pour la récupération des pseudonymes des joueurs au lancement du jeu.</li>
+      <li><strong>nlohmann/json :</strong> Bibliothèque de parsing permettant d'initialiser facilement les données du plateau (cartes, prix, loyers) à partir de fichiers JSON.</li>
+    </ul>
+
+    <h2>Architecture et Choix Techniques</h2>
+    
+    <h3>Gestion générique du plateau</h3>
+    <p>Étant donné la diversité des cases (Immobilière, Gare, Service Public, Taxe), le plateau est structuré autour d'un tableau de pointeurs génériques (<code>void*</code> via un type <code>ElementTD</code>). L'utilisation de <code>static_cast</code> permet de retrouver dynamiquement le type exact de la carte lors du passage d'un joueur, démontrant une manipulation avancée de la mémoire en C++.</p>
+
+    <div class="image-container">
+      <img src="Diagramme_des_classes.jpg" alt="Diagramme des classes du Monopoly">
+      <div class="caption">Diagramme des classes illustrant les relations entre le Plateau, les Joueurs et les différentes Cartes</div>
+    </div>
+
+    <h2>Défis Techniques Rencontrés</h2>
+    <ul>
+      <li><strong>Optimisation de la boucle de rendu SDL :</strong> Le rafraîchissement complet de la fenêtre lors de l'apparition de textes créait un effet de "flash". Le problème a été contourné en ciblant le redessinage de zones spécifiques (rectangles blancs) plutôt qu'un nettoyage complet (<code>RenderClear</code>).</li>
+      <li><strong>Intégration de GTKmm :</strong> La manipulation de cette bibliothèque pour les boîtes de dialogue s'est révélée complexe comparée à la SDL.</li>
+      <li><strong>Sécurité des cast C++ :</strong> L'apprentissage et la maîtrise de <code>static_cast</code> ont nécessité de la rigueur pour éviter des erreurs de segmentation lors de l'accès aux attributs spécifiques des cartes.</li>
+    </ul>
+
+  </div>
+</main>
+
+</body>
+</html>
