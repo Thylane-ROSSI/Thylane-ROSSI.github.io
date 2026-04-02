@@ -132,46 +132,49 @@
       box-shadow: 0 4px 10px rgba(26, 54, 93, 0.4);
     }
 
-  .skills-section {
-      background: white;
-      border-radius: 15px;
-      padding: 2.5rem 2rem;
-      margin-top: 3rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    .skills-section h2 {
+
+    .skill-card {
+      background: #f8fafc; 
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+      border-color: #2b6cb0;
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
       color: #1a365d;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    .skills-container {
+
+    .skill-tags {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.8rem;
+      gap: 0.5rem;
     }
-    .skill-badge {
-      background: #edf2f7;
-      color: #2b6cb0;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .skill-badge:hover {
-      background: #bee3f8;
-    }
-    /* Catégories de compétences */
-    .skill-category {
-      margin-bottom: 1.5rem;
-    }
-    .skill-category h3 {
-      font-size: 1rem;
+
+    .skill-tag {
+      background: white;
+      border: 1px solid #cbd5e0;
       color: #4a5568;
-      margin-bottom: 0.8rem;
-      border-left: 4px solid #2b6cb0;
-      padding-left: 10px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
     }
     
   </style>
@@ -220,39 +223,51 @@
   </div>
 
   <section class="skills-section">
-    <h2>Compétences Techniques</h2>
+    <h2>Compétences Techniques & Académiques</h2>
     
-    <div class="skill-category">
-      <h3>Langages</h3>
-      <div class="skills-container">
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">C / C++</span>
-        <span class="skill-badge">Java</span>
-        <span class="skill-badge">Prolog</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">PHP</span>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-code"></i> Langages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C / C++</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Prolog</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">PHP</span>
+        </div>
+      </div>
+  
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-database"></i> Web & Data</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL / MySQL</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">WebSocket</span>
+        </div>
+      </div>
+  
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-terminal"></i> Systèmes & DevOps</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Unix / Linux</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">Datadog</span>
+        </div>
+      </div>
+  
+      <div class="skill-card">
+        <h3><i class="fa-solid fa-calculator"></i> Mathématiques</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Analyse</span>
+          <span class="skill-tag">Algèbre</span>
+          <span class="skill-tag">Statistiques</span>
+          <span class="skill-tag">Probabilités</span>
+        </div>
       </div>
     </div>
-
-    <div class="skill-category">
-      <h3>Web & Data</h3>
-      <div class="skills-container">
-        <span class="skill-badge">SQL / MySQL</span>
-        <span class="skill-badge">HTML / CSS</span>
-        <span class="skill-badge">Flask</span>
-        <span class="skill-badge">WebSocket</span>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <h3>Systèmes & DevOps</h3>
-      <div class="skills-container">
-        <span class="skill-badge">Unix / Linux</span>
-        <span class="skill-badge">Kubernetes</span>
-        <span class="skill-badge">Datadog</span>
-      </div>
-    </div>
-  </section>
+</section>
   
 </main>
 
