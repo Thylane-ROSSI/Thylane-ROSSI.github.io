@@ -150,8 +150,8 @@
     <p>Je m'intéresse particulièrement à l'éthique de l'intelligence artificielle, à la transparence des algorithmes et à l'impact des technologies sur la société.</p>
     
     <div class="social-links">
-      <a href="mailto:thylane.rossi.pro@gmail.com" class="social-link">
-        <i class="fa-solid fa-envelope"></i> thylane.rossi.pro@gmail.com
+      <a href="javascript:void(0)" onclick="copierEmail()" class="social-link" id="btn-email">
+        <i class="fa-solid fa-envelope"></i> <span id="texte-email">thylane.rossi.pro@gmail.com</span>
       </a>
       <a href="https://www.linkedin.com/in/thylane-rossi-636a56354" target="_blank" class="social-link">
         <i class="fa-brands fa-linkedin"></i> LinkedIn
@@ -177,5 +177,18 @@
   </div>
 </main>
 
+
+<script>
+  function copierEmail() {
+    navigator.clipboard.writeText("thylane.rossi.pro@gmail.com").then(() => {
+      const spanTexte = document.getElementById("texte-email");
+      spanTexte.innerText = "Copié dans le presse-papier.";
+      setTimeout(() => {
+        spanTexte.innerText = "thylane.rossi.pro@gmail.com";
+      }, 2000); 
+    });
+  }
+</script>
+  
 </body>
 </html>
