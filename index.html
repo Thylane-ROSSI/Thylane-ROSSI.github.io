@@ -22,6 +22,7 @@
   <meta name="robots" content="index, follow">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -76,6 +77,60 @@
     .hub-icon { font-size: 4rem; margin-bottom: 1rem; }
     .hub-card h2 { color: #1a365d; margin-bottom: 0.5rem; }
     .hub-card p { color: #4a5568; font-size: 0.95rem; }
+    
+    .profile-section {
+      background: white;
+      border-radius: 15px;
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem; /* Espace avec les cartes en dessous */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    
+    .profile-section h2 {
+      color: #1a365d;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    
+    .profile-section p {
+      color: #4a5568;
+      margin-bottom: 1rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.05rem;
+    }
+
+    /* Style pour les boutons de contact */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: white;
+      background: #2b6cb0;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+      box-shadow: 0 2px 6px rgba(43, 108, 176, 0.3);
+    }
+    
+    .social-link:hover {
+      background: #1a365d;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(26, 54, 93, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -89,6 +144,24 @@
 </header>
 
 <main>
+  <section class="profile-section">
+    <h2>À propos de moi</h2>
+    <p>Diplômée d'une Licence d'informatique à l'Université Lyon 1, je suis actuellement étudiante en Licence de philosophie à l'Université Jean Moulin Lyon 3.</p>
+    <p>Je m'intéresse particulièrement à l'éthique de l'intelligence artificielle, à la transparence des algorithmes et à l'impact des technologies sur la société.</p>
+    
+    <div class="social-links">
+      <a href="mailto:thylane.rossi.pro@gmail.com" class="social-link">
+        <i class="fa-solid fa-envelope"></i> Me contacter
+      </a>
+      <a href="https://www.linkedin.com/in/thylane-rossi-636a56354" target="_blank" class="social-link">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/Thylane-ROSSI" target="_blank" class="social-link">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+  
   <div class="hub-grid">
     <a href="licence.html" class="hub-card">
       <div class="hub-icon">🎓</div>
