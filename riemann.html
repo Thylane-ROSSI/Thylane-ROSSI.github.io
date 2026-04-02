@@ -292,6 +292,55 @@
       <p><strong>Le résultat est une précision de 97.32% sur le jeu de test (données inconnues).</strong></p>
       <p>Puisque la précision de test correspond presque parfaitement à la précision d'entraînement, nous pouvons formellement écarter le "surapprentissage" (overfitting). Le réseau de neurones a véritablement découvert une signature mathématique fondamentale qui sépare la distribution des nombres premiers du pur hasard quantique — une frontière totalement invisible pour les statistiques traditionnelles.</p>
     </div>
+
+  <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #e2e8f0;">
+      
+      <h3>
+        <span class="en">PyTorch Architecture Implementation</span>
+        <span class="fr">Implémentation de l'Architecture (PyTorch)</span>
+      </h3>
+      
+      <div class="en">
+        <p>Here is the core code for our Multi-Layer Perceptron. We deliberately kept the model lightweight (only 3 computational layers) to prevent overfitting, while maintaining enough parameters to capture the complex, non-linear correlations of the sequences.</p>
+      </div>
+      
+      <div class="fr">
+        <p>Voici le code central de notre Perceptron Multicouche. Nous avons volontairement gardé un modèle léger (seulement 3 couches de calcul) pour éviter le surapprentissage (overfitting), tout en conservant suffisamment de paramètres pour capter les corrélations non linéaires complexes des séquences.</p>
+      </div>
+      
+      <div style="background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; margin-bottom: 2rem;">
+  <pre style="margin: 0;"><code>import torch.nn as nn
+
+class ChaosOracle(nn.Module):
+    def __init__(self, input_size=50):
+        super(ChaosOracle, self).__init__()
+        
+        self.network = nn.Sequential(
+            nn.Linear(input_size, 64),
+            nn.ReLU(),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 1),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        out = self.network(x)
+        return out.squeeze()</code></pre>
+      </div>
+
+      <div class="graph-grid">
+        <div class="graph-item" style="max-width: 600px; margin: 0 auto;">
+          <div style="width: 100%; height: 300px; background: #e2e8f0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #718096; font-weight: bold; border: 2px dashed #cbd5e0;">
+            <img src="training_curve.png" alt="Training Curve">
+          </div>
+          <div class="graph-caption" style="margin-top: 0.5rem;">
+            <span class="en">Training metrics over 5 epochs. The model successfully converges without overfitting.</span>
+            <span class="fr">Métriques d'entraînement sur 5 cycles. Le modèle converge avec succès sans surapprentissage.</span>
+          </div>
+        </div>
+      </div>
+  
   </div>
   
 </main>
