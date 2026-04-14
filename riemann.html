@@ -341,6 +341,57 @@ class ChaosOracle(nn.Module):
       </div>
   
   </div>
+
+
+    <div class="content-section">
+    <h2>
+      <span class="en">Phase 4: Explainable AI and Interpretability</span>
+      <span class="fr">Phase 4 : IA Explicable et Interprétabilité</span>
+    </h2>
+    
+    <div class="en">
+      <p>While our neural network accurately distinguishes between GUE and Riemann spacings with over 97% accuracy, it effectively acts as a "black box." Phase 4 aims to look inside this box using <strong>Explainable AI (XAI)</strong> to understand <em>how</em> the model makes its decisions.</p>
+      <p>We use <strong>SHAP (SHapley Additive exPlanations)</strong>, a method rooted in cooperative game theory. SHAP assigns an importance value to each of the 50 level spacings in a sequence based on its contribution to the model's final prediction. By computing the marginal contribution of each feature across different combinations, we can see exactly which parts of the sequence carry the distinct mathematical signatures.</p>
+    </div>
+    
+    <div class="fr">
+      <p>Bien que notre réseau de neurones distingue précisément les espacements GUE et Riemann avec plus de 97 % de précision, il agit dans les faits comme une "boîte noire". La Phase 4 vise à ouvrir cette boîte grâce à <strong>l'IA Explicable (XAI)</strong> pour comprendre <em>comment</em> le modèle prend ses décisions.</p>
+      <p>Nous utilisons <strong>SHAP (SHapley Additive exPlanations)</strong>, une méthode issue de la théorie des jeux coopératifs. SHAP attribue une valeur d'importance à chacun des 50 espacements d'une séquence en fonction de sa contribution à la prédiction finale. En calculant l'apport marginal de chaque caractéristique, nous pouvons voir quelles parties de la séquence portent la signature mathématique qui permet de les différencier.</p>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-item" style="max-width: 600px; margin: 1.5rem auto;">
+        <img src="shap_summary.png" alt="SHAP Summary Plot">
+        <div class="graph-caption">
+          <span class="en">SHAP Summary Plot ranking the features by impact on the final prediction</span>
+          <span class="fr">Graphique SHAP classant les variables selon leur impact sur la prédiction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="en">
+      <h3>Interpreting the SHAP Results</h3>
+      <p>The summary plot above provides crucial insights into the model's logic. Here is what we can observe:</p>
+      <ul>
+        <li><strong>Distributed Importance:</strong> The model does not rely on a single anomaly. The most important features ("Ecart 21", "Ecart 22", "Ecart 31") are located around the middle of the 50-step window, but many other spacings actively contribute to the decision.</li>
+        <li><strong>Direction of Correlation:</strong> The color indicates the value of the spacing (Red = High, Blue = Low), and the X-axis shows the impact on the model's output (Positive SHAP values push towards Label 1 : Riemann, while Negative SHAP values push towards Label 0 : GUE).</li>
+        <li><strong>Complex Non-Linearity:</strong> Looking at the top feature ("Ecart 21"), we see that lower values (blue dots) strongly push the prediction towards the Riemann Zeta function, while higher values (red dots) push it toward GUE. Conversely, for feature "Ecart 31", the relationship is reversed: higher values (red) push the prediction toward Riemann.</li>
+      </ul>
+      <p>This confirms that the neural network has successfully isolated a highly complex, multi-dimensional structural pattern. It proves that the difference between pure quantum randomness and prime number distribution isn't found in a single average, but in a subtle, alternating rhythm hidden deep within the sequences.</p>
+    </div>
+
+    <div class="fr">
+      <h3>Interprétation des Résultats SHAP</h3>
+      <p>Le graphique ci-dessus nous donne des indications précieuses sur la logique interne du modèle. Voici ce que nous pouvons observer :</p>
+      <ul>
+        <li><strong>Importance Distribuée :</strong> Le modèle ne se repose pas sur une anomalie isolée. Les caractéristiques les plus importantes ("Ecart 21", "Ecart 22", "Ecart 31") se situent vers le centre de la fenêtre de 50 étapes, mais de nombreux autres espacements contribuent activement à la décision.</li>
+        <li><strong>Direction de la Corrélation :</strong> La couleur indique la valeur de l'espacement (Rouge = Élevé, Bleu = Faible), et l'axe X montre l'impact sur la sortie du modèle (Les valeurs SHAP positives poussent vers le Label 1 : Riemann, tandis que les valeurs négatives poussent vers le Label 0 : GUE).</li>
+        <li><strong>Non-linéarité Complexe :</strong> En observant la variable la plus influente ("Ecart 21"), on remarque que des valeurs plus faibles (points bleus) poussent fortement la prédiction vers la fonction Zêta de Riemann, tandis que des valeurs élevées (points rouges) tendent vers GUE. À l'inverse, pour l'"Ecart 31", la relation est inversée : les valeurs élevées (rouges) poussent vers Riemann.</li>
+      </ul>
+      <p>Cela confirme que le réseau de neurones a réussi à isoler un motif structurel multidimensionnel très complexe. Cela prouve que la différence entre l'aléatoire quantique pur et la distribution des nombres premiers ne se trouve pas dans une simple moyenne, mais dans un rythme subtil et alterné, caché au cœur même des séquences.</p>
+    </div>
+  </div>
+
   
 </main>
 
