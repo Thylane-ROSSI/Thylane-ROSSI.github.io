@@ -446,7 +446,7 @@ class ChaosOracle(nn.Module):
     <div class="fr">
       <ul style="margin-bottom: 1.5rem;">
         <li><strong>Biais de sélection :</strong> Les matrices GUE sont de taille fixe (N=1000). Le dépliage (unfolding) des premiers zéros de Riemann est analytiquement moins précis.</li>
-        <li><strong>Dépliage imparfait :</strong> L'utilisation d'approximations asymptotiques pourrait laisser des artefacts de densité résiduels.</li>
+        <li><strong>Unfolding imparfait :</strong> L'utilisation d'approximations asymptotiques pourrait laisser des artefacts de densité résiduels.</li>
         <li><strong>Surapprentissage potentiel :</strong> 97.6% de précision est exceptionnellement élevé ; des tests sur d'autres ensembles ou très grandes hauteurs sont requis.</li>
         <li><strong>Limites de SHAP :</strong> SHAP suppose l'indépendance des variables, ce qui est faux pour des séquences liées, pouvant fausser l'attribution spécifique d'importance.</li>
       </ul>
