@@ -392,6 +392,82 @@ class ChaosOracle(nn.Module):
     </div>
   </div>
 
+
+
+<div class="content-section">
+    <h2>
+      <span class="en">Phase 5: Global Interpretability & Decoding the AI's Logic</span>
+      <span class="fr">Phase 5 : Interprétabilité Globale & Décryptage de l'IA</span>
+    </h2>
+    <div class="en">
+      <p>After demonstrating that our model could distinguish GUE and Riemann with 97.6% accuracy (Phase 3) and identifying influential spacings for individual predictions (Phase 4), this final phase aims to understand globally <em>how</em> the model makes its decisions.</p>
+      <p>To achieve this, we scaled our SHAP analysis to aggregate the impact of each spacing across the entire dataset (5,000 sequences), revealing the underlying structural motifs learned by the neural network.</p>
+
+      <h3 style="margin-top: 1.5rem; color: #2b6cb0;">Key Results</h3>
+      <p><strong>1. Central Spacings are the Most Discriminative:</strong> The model largely ignores the first and last spacings of a sequence (positions 1–17 and 40–50) and focuses heavily on a central window (positions 18–35). This suggests that medium-range correlations carry a distinct mathematical signature that separates GUE and Riemann.</p>
+      <p><strong>2. Large Spacings = Riemann:</strong> High values for certain central spacings (e.g., 21, 22, 31) strongly push the prediction toward "Riemann", while low values push toward "GUE".</p>
+      <p><strong>3. Symmetry and Recurring Motifs:</strong> Certain adjacent spacings share almost identical importance weights, suggesting the model exploits pairs or triplets of spacings (reminiscent of N-body correlations in physics).</p>
+    </div>
+
+    <div class="fr">
+      <p>Après avoir démontré que notre modèle pouvait distinguer GUE et Riemann avec 97.6% de précision (Phase 3) et identifié les espacements influents pour des prédictions individuelles (Phase 4), cette dernière phase vise à comprendre globalement <em>comment</em> le modèle prend ses décisions.</p>
+      <p>Pour cela, nous avons mis à l'échelle notre analyse SHAP sur l'ensemble du jeu de données (5 000 séquences), révélant les motifs structurels appris par le réseau de neurones.</p>
+
+      <h3 style="margin-top: 1.5rem; color: #2b6cb0;">Résultats Clés</h3>
+      <p><strong>1. Les espacements centraux sont les plus discriminants :</strong> Le modèle ignore largement les extrémités de la séquence et se concentre sur une fenêtre centrale (positions 18–35). Cela suggère que les corrélations à moyenne portée portent une signature mathématique distincte.</p>
+      <p><strong>2. Grands espacements = Riemann :</strong> Des valeurs élevées pour certains espacements centraux favorisent fortement la prédiction "Riemann", tandis que des valeurs faibles favorisent "GUE".</p>
+      <p><strong>3. Symétrie et motifs récurrents :</strong> Certains espacements adjacents partagent des poids d'importance presque identiques, suggérant que le modèle exploite des paires ou triplets d'espacements (rappelant les corrélations à N corps).</p>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-item" style="max-width: 800px; margin: 0 auto;">
+        <img src="shap_global_summary.png" alt="Global SHAP Summary" style="width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="graph-caption" style="margin-top: 0.8rem; font-size: 1rem;">
+          <span class="en">The top 20 most influential spacings on the model's output. The central cluster (spacings 18–35) clearly dominates the decision-making process.</span>
+          <span class="fr">Les 20 espacements les plus influents. Le cluster central (espacements 18–35) domine clairement le processus de décision.</span>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin: 2.5rem 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+    <h3>
+      <span class="en">Limitations & Epistemological Biases</span>
+      <span class="fr">Limites & Biais Épistémologiques</span>
+    </h3>
+    <div class="en">
+      <ul style="margin-bottom: 1.5rem;">
+        <li><strong>Data Selection Bias:</strong> GUE matrices were fixed at N=1000. The Riemann zeros unfolding is less precise at the beginning of the critical line.</li>
+        <li><strong>Imperfect Unfolding:</strong> Relies on asymptotic approximations which might leave residual density artifacts that the AI exploited.</li>
+        <li><strong>Potential Overfitting:</strong> 97.6% accuracy is suspiciously high; further testing on different ensembles or extreme heights is necessary to prove generalization.</li>
+        <li><strong>SHAP Assumptions:</strong> SHAP assumes feature independence, which is false for sequential spacings, potentially skewing specific attributions.</li>
+      </ul>
+    </div>
+    <div class="fr">
+      <ul style="margin-bottom: 1.5rem;">
+        <li><strong>Biais de sélection :</strong> Les matrices GUE sont de taille fixe (N=1000). Le dépliage (unfolding) des premiers zéros de Riemann est analytiquement moins précis.</li>
+        <li><strong>Dépliage imparfait :</strong> L'utilisation d'approximations asymptotiques pourrait laisser des artefacts de densité résiduels.</li>
+        <li><strong>Surapprentissage potentiel :</strong> 97.6% de précision est exceptionnellement élevé ; des tests sur d'autres ensembles ou très grandes hauteurs sont requis.</li>
+        <li><strong>Limites de SHAP :</strong> SHAP suppose l'indépendance des variables, ce qui est faux pour des séquences liées, pouvant fausser l'attribution spécifique d'importance.</li>
+      </ul>
+    </div>
+
+    <hr style="margin: 2.5rem 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+    <h3>
+      <span class="en">Conclusion & Future Perspectives</span>
+      <span class="fr">Conclusion & Perspectives Futures</span>
+    </h3>
+    <div class="en">
+      <p><strong>What We Learned:</strong> An Artificial Intelligence can distinguish GUE from Riemann by exploiting medium-range correlations (central spacings 18–35), potentially linked to N-body correlations that differ from pure quantum randomness.</p>
+      <p><strong>Takeaways with Caution:</strong> This is an empirical demonstration, not a formal mathematical proof. Biases like numerical artifacts and unfolding approximations must be rigorously considered.</p>
+    </div>
+    <div class="fr">
+      <p><strong>Ce que nous avons appris :</strong> Une IA peut distinguer GUE et Riemann en exploitant des corrélations à moyenne portée (espacements centraux 18–35), potentiellement liées à des corrélations à N corps différant du pur hasard quantique.</p>
+      <p><strong>À retenir avec prudence :</strong> Il s'agit d'une démonstration empirique et non d'une preuve mathématique formelle. Les biais tels que les artefacts numériques et les approximations de dépliage doivent être pris en compte.</p>
+    </div>
+  </div>
+  
   
 </main>
 
