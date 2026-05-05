@@ -11,7 +11,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Riemann-Dyson Experiment - Thylane Rossi</title>
+  <title>Riemann Oracle V2 - Thylane Rossi</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -141,7 +141,6 @@
     }
     .graph-caption { font-size: 0.9rem; color: #718096; font-style: italic; }
 
-    /* Adaptation des encarts de l'autre IA à notre design */
     .highlight-box {
       background-color: #ebf8ff;
       border-left: 4px solid #2b6cb0;
@@ -172,418 +171,156 @@
     </a>
     <button id="langToggle" class="lang-btn">FR</button>
 
-    <h1>The Riemann-Dyson Experiment</h1>
-    <p class="en">Can AI tell the difference between quantum chaos and prime numbers?</p>
-    <p class="fr">Une intelligence artificielle peut-elle distinguer chaos quantique et nombres premiers ?</p>
+    <h1>The Riemann-Dyson Experiment (V2)</h1>
+    <p class="en">Breaking Universality: Deep Learning at High Altitudes</p>
+    <p class="fr">Brisure d'Universalité : Le Deep Learning à très haute altitude</p>
   </header>
 
   <main>
     <div class="action-bar">
       <a href="https://github.com/Thylane-ROSSI/v2-riemann" target="_blank" class="btn btn-git">
         <i class="fab fa-github"></i>
-        <span class="en"> View Project on GitHub</span>
-        <span class="fr"> Voir le projet sur GitHub</span>
+        <span class="en"> View V2 Code on GitHub</span>
+        <span class="fr"> Voir le code V2 sur GitHub</span>
       </a>
     </div>
 
     <div class="legacy-alert">
       <span class="en">
-        <strong>Note:</strong> This page presents the second phase of the research project, focusing on high-altitude zeros of the Riemann Zeta function.
-        To explore the initial theory and foundational work, please <a href="riemann-v1.html">visit the first version</a>.
+        <strong>Note:</strong> This page presents <strong>Phase 2</strong> of my research project. It corrects a major epistemological flaw from the first version and introduces stricter mathematical constraints. To read about the exploratory phase (V1) and the basics of Random Matrix Theory, please <a href="riemann-v1.html">visit the V1 Archive</a>.
       </span>
       <span class="fr">
-        <strong>Note :</strong> Cette page présente la deuxième phase du projet de recherche, centrée sur les zéros de haute altitude de la fonction Zêta de Riemann.
-        Pour découvrir la théorie initiale et les travaux fondateurs, consultez <a href="riemann-v1.html">la première version</a>.
+        <strong>Note :</strong> Cette page présente la <strong>Phase 2</strong> de mon projet de recherche. Elle corrige une faille épistémologique majeure de la première version. Pour découvrir la théorie initiale (V1) et les bases des matrices aléatoires, veuillez <a href="riemann-v1.html">consulter l'archive V1</a>.
       </span>
     </div>
 
     <div class="content-section">
       <h2>
-        <span class="en">1. The Big Question</span>
-        <span class="fr">1. La grande question</span>
+        <span class="en">1. The Doubt: Was the AI cheating?</span>
+        <span class="fr">1. Le Doute : L'IA trichait-elle ?</span>
       </h2>
 
       <div class="en">
-        <p>In the 1970s, physicists and mathematicians discovered something astonishing: the energy levels of heavy atoms and the zeros of the Riemann Zeta function (which govern prime numbers) follow the same statistical patterns. This connection, known as the Montgomery-Dyson conjecture, suggests a deep link between quantum physics and number theory.</p>
-
-        <p>But here's the catch: while these patterns look identical in theory, could there be subtle differences that only a machine can detect?</p>
-
-        <p>This project explores whether artificial intelligence can distinguish between:</p>
-        <ul>
-          <li><strong>Quantum chaos:</strong> Simulated energy levels of heavy atoms (using random matrices)</li>
-          <li><strong>Mathematical chaos:</strong> The zeros of the Riemann Zeta function (related to prime numbers)</li>
-        </ul>
-
-        <p>If successful, this could open new avenues for understanding both quantum systems and the distribution of prime numbers.</p>
+        <p>In the 1970s, it was discovered that the spacing between prime numbers (via the Riemann Zeta zeros) perfectly mimics the energy levels of complex atoms (Quantum Chaos, simulated by GUE matrices). In my V1 project, an AI managed to tell them apart with 97% accuracy.</p>
+        <p>But a massive scientific doubt remained: <strong>The Unfolding Bias.</strong></p>
+        <p>To compare these two worlds, mathematicians use a formula called "unfolding" to normalize the data. However, for the very first zeros of the Riemann function (the ones used in V1), this formula is only an approximation. It leaves a microscopic "calculation shadow".</p>
+        <p><em>The big question was:</em> Did the AI actually discover a fundamental difference between quantum physics and prime numbers, or did it just lazily detect this mathematical shadow?</p>
       </div>
 
       <div class="fr">
-        <p>Dans les années 1970, physiciens et mathématiciens ont découvert quelque chose d'étonnant : les niveaux d'énergie des atomes lourds et les zéros de la fonction Zêta de Riemann (qui régissent les nombres premiers) suivent les mêmes motifs statistiques. Cette connexion, connue sous le nom de conjecture de Montgomery-Dyson, suggère un lien profond entre la physique quantique et la théorie des nombres.</p>
-
-        <p>Mais voici le défi : bien que ces motifs semblent identiques en théorie, pourrait-il exister des différences subtiles que seule une machine peut détecter ?</p>
-
-        <p>Ce projet explore si une intelligence artificielle peut distinguer :</p>
-        <ul>
-          <li><strong>Le chaos quantique :</strong> Les niveaux d'énergie simulés d'atomes lourds (en utilisant des matrices aléatoires)</li>
-          <li><strong>Le chaos mathématique :</strong> Les zéros de la fonction Zêta de Riemann (liés aux nombres premiers)</li>
-        </ul>
-
-        <p>Si ce projet aboutit, il pourrait ouvrir de nouvelles pistes pour comprendre à la fois les systèmes quantiques et la distribution des nombres premiers.</p>
+        <p>Dans les années 1970, on a découvert que l'espacement entre les nombres premiers (via les zéros de Riemann) imitait parfaitement les niveaux d'énergie des atomes complexes (Chaos quantique, simulé par les matrices GUE). Dans mon projet V1, une IA a réussi à les différencier avec 97% de précision.</p>
+        <p>Mais un doute scientifique massif subsistait : <strong>Le biais de dépliage (Unfolding Bias).</strong></p>
+        <p>Pour comparer ces deux mondes, on utilise une formule de "dépliage" pour normaliser les données. Cependant, pour les tout premiers zéros de la fonction de Riemann (ceux utilisés en V1), cette formule n'est qu'une approximation. Elle laisse une ombre microscopique, un résidu de calcul.</p>
+        <p><em>La grande question était :</em> L'IA a-t-elle réellement découvert une différence fondamentale entre la physique quantique et les nombres premiers, ou s'est-elle contentée de repérer cette erreur d'approximation ?</p>
       </div>
     </div>
 
     <div class="content-section">
       <h2>
-        <span class="en">2. How It Works: The Data</span>
-        <span class="fr">2. Comment ça marche : les données</span>
+        <span class="en">2. The V2 Protocol: Extreme Altitudes and 3-Body Dynamics</span>
+        <span class="fr">2. Le Protocole V2 : Haute altitude et dynamiques à 3 corps</span>
       </h2>
 
       <div class="en">
-        <p>To compare these two systems, we need to process their data in a special way called "unfolding". This technique normalizes the spacing between energy levels or zeros, allowing us to focus on their local patterns rather than their global distribution.</p>
+        <p>To ensure the AI couldn't cheat, we had to make the data perfectly pure. We changed two critical rules in this second version:</p>
 
         <div class="highlight-box">
-          <p><strong>Quantum System (GUE):</strong></p>
           <ul>
-            <li>We generate random matrices (1000×1000) filled with complex numbers</li>
-            <li>We extract their eigenvalues (which represent energy levels)</li>
-            <li>We apply unfolding to normalize the spacing between these levels</li>
+            <li><strong>1. Climbing to Extreme Altitudes (OOD Testing):</strong> We stopped using the first zeros. Instead, we used Andrew Odlyzko's `zeros6` tables, which represent zeros located at $T \approx 10^{20}$ (the 100 quintillionth zero). Up there, the unfolding formula is nearly flawless. The "shadow" disappears.</li>
+            <li><strong>2. From Pairs to Triplets ($C_3$ correlations):</strong> Looking at just two adjacent numbers wasn't enough. We shifted the AI's focus to 3-body correlations ($C_3$). Simply put, instead of looking at the distance between two trees, the AI now analyzes the rhythm of three consecutive gaps.</li>
           </ul>
         </div>
-
-        <div class="highlight-box">
-          <p><strong>Riemann Zeta Function:</strong></p>
-          <ul>
-            <li>We use precomputed zeros of the function (thanks to Andrew Odlyzko's work)</li>
-            <li>We apply a mathematical transformation to unfold these zeros</li>
-            <li>This gives us a sequence of normalized spacings similar to the quantum system</li>
-          </ul>
-        </div>
-
-        <p>After unfolding, both systems should theoretically look identical when we plot the distribution of their spacings. But do they really?</p>
       </div>
 
       <div class="fr">
-        <p>Pour comparer ces deux systèmes, nous devons traiter leurs données d'une manière spéciale appelée "dépliage". Cette technique normalise l'espacement entre les niveaux d'énergie ou les zéros, ce qui nous permet de nous concentrer sur leurs motifs locaux plutôt que sur leur distribution globale.</p>
+        <p>Pour empêcher l'IA de tricher, il fallait rendre les données absolument pures. Nous avons modifié deux règles fondamentales dans cette seconde version :</p>
 
         <div class="highlight-box">
-          <p><strong>Système quantique (GUE) :</strong></p>
           <ul>
-            <li>Nous générons des matrices aléatoires (1000×1000) remplies de nombres complexes</li>
-            <li>Nous extrayons leurs valeurs propres (qui représentent les niveaux d'énergie)</li>
-            <li>Nous appliquons le dépliage pour normaliser l'espacement entre ces niveaux</li>
+            <li><strong>1. Monter à des altitudes extrêmes (Test OOD) :</strong> Nous avons arrêté d'utiliser les premiers zéros. À la place, nous avons utilisé les tables `zeros6` d'Andrew Odlyzko, qui contiennent des zéros situés autour de $T \approx 10^{20}$ (le cent trillionième zéro). À cette "hauteur", la formule de dépliage est quasi-parfaite. L'ombre de calcul disparaît.</li>
+            <li><strong>2. Passer des paires aux triplets (Corrélations $C_3$) :</strong> Regarder seulement deux nombres adjacents ne suffisait plus. Nous avons forcé l'IA à analyser les corrélations à 3 corps ($C_3$). En clair, au lieu de regarder la distance entre deux arbres, l'IA analyse désormais le "rythme" de trois écarts consécutifs.</li>
           </ul>
         </div>
+      </div>
+    </div>
 
-        <div class="highlight-box">
-          <p><strong>Fonction Zêta de Riemann :</strong></p>
-          <ul>
-            <li>Nous utilisons des zéros pré-calculés de la fonction (grâce aux travaux d'Andrew Odlyzko)</li>
-            <li>Nous appliquons une transformation mathématique pour déplier ces zéros</li>
-            <li>Cela nous donne une séquence d'espacements normalisés similaire au système quantique</li>
-          </ul>
-        </div>
+    <div class="content-section">
+      <h2>
+        <span class="en">3. Results & Opening the Black Box</span>
+        <span class="fr">3. Résultats & Ouverture de la boîte noire</span>
+      </h2>
 
-        <p>Après le dépliage, les deux systèmes devraient théoriquement paraître identiques lorsque nous traçons la distribution de leurs espacements. Mais est-ce vraiment le cas ?</p>
+      <div class="en">
+        <p>We trained a robust Neural Network on this new, ultra-pure dataset. <strong>The result: an AUC-ROC score of 0.9383.</strong> The AI could still confidently tell the difference between quantum randomness and prime numbers, proving it wasn't just a computational artifact!</p>
+        <p>But how does it do it? To find out, we used <strong>SHAP</strong> (Explainable AI) to visualize the AI's thought process. We asked it: <em>"In a sequence of 50 rhythmic gaps, where do you look to make your decision?"</em></p>
+      </div>
+
+      <div class="fr">
+        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures. <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers. Preuve est faite qu'il ne s'agissait pas d'un simple bug de calcul !</p>
+        <p>Mais comment fait-elle ? Pour le savoir, nous avons utilisé <strong>SHAP</strong> (Une IA Explicable) pour visualiser le cerveau du modèle. Nous lui avons demandé : <em>"Dans une séquence de 50 rythmes, où regardes-tu pour prendre ta décision ?"</em></p>
       </div>
 
       <div class="graph-grid">
         <div class="graph-item">
-          <img src="wigner_surmise.png" alt="Spacing distribution for quantum system">
+          <img src="plots/shap_global_importance.png" alt="Global Importance of C3 Triplets">
           <div class="graph-caption">
-            <span class="en">Spacing distribution for quantum system (GUE)</span>
-            <span class="fr">Distribution des espacements pour le système quantique (GUE)</span>
+            <span class="en">The AI acts like a sniper: it ignores the edges and focuses heavily on specific positions (e.g., pos 35 and 24).</span>
+            <span class="fr">L'IA agit comme un sniper : elle ignore les bords et se concentre violemment sur des positions spécifiques (ex: pos 35 et 24).</span>
           </div>
         </div>
         <div class="graph-item">
-          <img src="riemann_surmise.png" alt="Spacing distribution for Riemann zeros">
+          <img src="plots/shap_beeswarm.png" alt="Directional Impact Beeswarm Plot">
           <div class="graph-caption">
-            <span class="en">Spacing distribution for Riemann zeros</span>
-            <span class="fr">Distribution des espacements pour les zéros de Riemann</span>
+            <span class="en">The "Beeswarm" plot shows a complex, asymmetric decision boundary.</span>
+            <span class="fr">Le graphique en essaim montre une frontière de décision asymétrique et complexe.</span>
           </div>
         </div>
       </div>
 
       <div class="en">
-        <p style="margin-top: 1rem;">These graphs show the distribution of spacings after unfolding. At first glance, they look identical - both show "level repulsion" where spacings tend to avoid being too small. But could there be hidden patterns in the sequences of these spacings?</p>
+        <p style="margin-top: 1.5rem;"><strong>The "Resonance" Discovery:</strong> The graphs show that the AI doesn't just look for a generic difference. It anchors its decision on the cross-correlation between specific distant points (like a gap of 11 steps between position 35 and 24). It discovered that Riemann zeros possess a subtle, non-linear "resonance" at medium ranges—a hidden harmony that pure quantum chaos simply does not have.</p>
       </div>
       <div class="fr">
-        <p style="margin-top: 1rem;">Ces graphiques montrent la distribution des espacements après dépliage. À première vue, ils semblent identiques - tous deux montrent une "répulsion de niveaux" où les espacements tendent à éviter d'être trop petits. Mais pourrait-il y avoir des motifs cachés dans les séquences de ces espacements ?</p>
+        <p style="margin-top: 1.5rem;"><strong>La découverte de "Résonance" :</strong> Les graphiques montrent que l'IA ne cherche pas une différence globale. Elle ancre sa décision sur l'écartement entre des points précis (comme un saut de 11 crans entre la position 35 et 24). Elle a découvert que les zéros de Riemann possèdent une subtile "résonance" non-linéaire à moyenne portée. Une harmonie cachée que le pur chaos quantique ne possède pas.</p>
       </div>
     </div>
 
     <div class="content-section">
       <h2>
-        <span class="en">3. The AI Approach</span>
-        <span class="fr">3. L'approche par IA</span>
+        <span class="en">4. A Humble Conclusion</span>
+        <span class="fr">4. Une Conclusion Humble</span>
       </h2>
 
       <div class="en">
-        <p>To test whether there are subtle differences between the two systems, we trained a neural network to distinguish between sequences of spacings from each source.</p>
-
-        <div class="highlight-box">
-          <p><strong>How the AI works:</strong></p>
-          <ul>
-            <li>Input: Sequences of 50 consecutive spacings</li>
-            <li>Output: Probability that the sequence comes from Riemann zeros (vs. quantum system)</li>
-            <li>Architecture: A simple neural network with two hidden layers (64 and 32 neurons)</li>
-            <li>Training: 5 epochs on balanced datasets from both systems</li>
-          </ul>
-        </div>
-
-        <p>The results were surprising: the AI achieved over 97% accuracy in distinguishing between the two systems. This suggests there are indeed subtle patterns that differentiate them.</p>
-
-        <div class="graph-item" style="max-width: 800px; margin: 2rem auto;">
-          <img src="training_curve.png" alt="Training progress of the neural network">
-          <div class="graph-caption">
-            <span class="en">Training progress showing high accuracy without overfitting</span>
-            <span class="fr">Progression de l'entraînement montrant une haute précision sans surapprentissage</span>
-          </div>
-        </div>
+        <p><strong>Did we solve the Riemann Hypothesis? Absolutely not.</strong></p>
+        <p>This project is an empirical observation, not a mathematical proof. However, it strongly suggests that the famous Wigner-Dyson universality (the idea that prime numbers and quantum physics are statistically identical) might break down when we look closely at higher-order, 3-body correlations.</p>
+        <p>By pointing exactly to where these anomalies occur, Machine Learning can act as a powerful compass for theoretical mathematicians and physicists, guiding them toward equations that might have been overlooked.</p>
       </div>
 
       <div class="fr">
-        <p>Pour tester s'il existe des différences subtiles entre les deux systèmes, nous avons entraîné un réseau de neurones à distinguer les séquences d'espacements provenant de chaque source.</p>
-
-        <div class="highlight-box">
-          <p><strong>Comment fonctionne l'IA :</strong></p>
-          <ul>
-            <li>Entrée : Séquences de 50 espacements consécutifs</li>
-            <li>Sortie : Probabilité que la séquence provienne des zéros de Riemann (vs. système quantique)</li>
-            <li>Architecture : Un réseau de neurones simple avec deux couches cachées (64 et 32 neurones)</li>
-            <li>Entraînement : 5 cycles sur des jeux de données équilibrés des deux systèmes</li>
-          </ul>
-        </div>
-
-        <p>Les résultats ont été surprenants : l'IA a atteint plus de 97% de précision dans la distinction entre les deux systèmes. Cela suggère qu'il existe bien des motifs subtils qui les différencient.</p>
-
-        <div class="graph-item" style="max-width: 800px; margin: 2rem auto;">
-          <img src="training_curve.png" alt="Progression de l'entraînement du réseau de neurones">
-          <div class="graph-caption">
-            <span class="en">Training progress showing high accuracy without overfitting</span>
-            <span class="fr">Progression de l'entraînement montrant une haute précision sans surapprentissage</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="content-section">
-      <h2>
-        <span class="en">4. What the AI Discovered</span>
-        <span class="fr">4. Ce que l'IA a découvert</span>
-      </h2>
-
-      <div class="en">
-        <p>To understand what patterns the AI was using to make its decisions, we used a technique called SHAP (SHapley Additive exPlanations). This method helps us see which parts of the input sequences were most important for the AI's predictions.</p>
-
-        <div class="graph-grid">
-          <div class="graph-item">
-            <img src="shap_global_importance.png" alt="Global importance of different positions in the sequence">
-            <div class="graph-caption">
-              Global importance of different positions in the 50-spacing sequence
-            </div>
-          </div>
-          <div class="graph-item">
-            <img src="shap_beeswarm.png" alt="Directional impact of spacing values on predictions">
-            <div class="graph-caption">
-              How spacing values influence the AI's predictions (red = Riemann, blue = GUE)
-            </div>
-          </div>
-        </div>
-
-        <p style="margin-top: 1rem;">The SHAP analysis revealed several interesting findings:</p>
-
-        <div class="highlight-box">
-          <p><strong>Key discoveries:</strong></p>
-          <ul>
-            <li><strong>Central positions matter most:</strong> The AI focused on positions 18-35 in the 50-spacing sequences, ignoring the edges</li>
-            <li><strong>Large spacings point to Riemann:</strong> When certain central positions had large spacing values, the AI was more likely to predict Riemann zeros</li>
-            <li><strong>Patterns in pairs and triplets:</strong> The AI seemed to look at relationships between nearby spacings, not just individual values</li>
-          </ul>
-        </div>
-
-        <p>These results suggest that while the overall spacing distributions look identical, there are subtle medium-range correlations that differ between the quantum system and Riemann zeros.</p>
-      </div>
-
-      <div class="fr">
-        <p>Pour comprendre quels motifs l'IA utilisait pour prendre ses décisions, nous avons utilisé une technique appelée SHAP (SHapley Additive exPlanations). Cette méthode nous aide à voir quelles parties des séquences d'entrée étaient les plus importantes pour les prédictions de l'IA.</p>
-
-        <div class="graph-grid">
-          <div class="graph-item">
-            <img src="plots/shap_global_importance.png" alt="Importance globale des différentes positions dans la séquence">
-            <div class="graph-caption">
-              Importance globale des différentes positions dans la séquence de 50 espacements
-            </div>
-          </div>
-          <div class="graph-item">
-            <img src="plots/shap_beeswarm.png" alt="Impact directionnel des valeurs d'espacement sur les prédictions">
-            <div class="graph-caption">
-              Comment les valeurs d'espacement influencent les prédictions de l'IA (rouge = Riemann, bleu = GUE)
-            </div>
-          </div>
-        </div>
-
-        <p style="margin-top: 1rem;">L'analyse SHAP a révélé plusieurs découvertes intéressantes :</p>
-
-        <div class="highlight-box">
-          <p><strong>Découvertes clés :</strong></p>
-          <ul>
-            <li><strong>Les positions centrales comptent le plus :</strong> L'IA s'est concentrée sur les positions 18-35 dans les séquences de 50 espacements, ignorant les bords</li>
-            <li><strong>Les grands espacements indiquent Riemann :</strong> Lorsque certaines positions centrales avaient de grandes valeurs d'espacement, l'IA était plus susceptible de prédire des zéros de Riemann</li>
-            <li><strong>Motifs par paires et triplets :</strong> L'IA semblait examiner les relations entre espacements voisins, pas seulement les valeurs individuelles</li>
-          </ul>
-        </div>
-
-        <p>Ces résultats suggèrent que bien que les distributions globales d'espacement semblent identiques, il existe des corrélations subtiles à moyenne portée qui diffèrent entre le système quantique et les zéros de Riemann.</p>
-      </div>
-    </div>
-
-    <div class="content-section">
-      <h2>
-        <span class="en">5. Limitations and Future Work</span>
-        <span class="fr">5. Limites et perspectives</span>
-      </h2>
-
-      <div class="en">
-        <p>While these results are exciting, it's important to recognize the limitations of this study:</p>
-
-        <div class="highlight-box">
-          <p><strong>Key limitations:</strong></p>
-          <ul>
-            <li><strong>Data constraints:</strong> We used a specific range of Riemann zeros and a fixed size for our quantum matrices</li>
-            <li><strong>Unfolding imperfections:</strong> The unfolding process for Riemann zeros is an approximation that becomes more accurate at higher values</li>
-            <li><strong>SHAP assumptions:</strong> The explainability method assumes features are independent, which isn't true for sequential data</li>
-            <li><strong>Potential artifacts:</strong> The AI might have detected computational artifacts rather than true mathematical differences</li>
-          </ul>
-        </div>
-
-        <p>Future work could explore:</p>
-        <ul>
-          <li>Testing with different ranges of Riemann zeros (especially much higher values)</li>
-          <li>Using different sizes of quantum matrices</li>
-          <li>Exploring more sophisticated neural network architectures</li>
-          <li>Investigating whether the patterns hold for other types of random matrices</li>
-        </ul>
-
-        <p>This project represents an initial exploration rather than a definitive answer. The most exciting aspect is that it opens new questions about the relationship between quantum physics and number theory.</p>
-      </div>
-
-      <div class="fr">
-        <p>Bien que ces résultats soient passionnants, il est important de reconnaître les limites de cette étude :</p>
-
-        <div class="highlight-box">
-          <p><strong>Limites principales :</strong></p>
-          <ul>
-            <li><strong>Contraintes des données :</strong> Nous avons utilisé une plage spécifique de zéros de Riemann et une taille fixe pour nos matrices quantiques</li>
-            <li><strong>Imperfections du dépliage :</strong> Le processus de dépliage pour les zéros de Riemann est une approximation qui devient plus précise pour des valeurs plus élevées</li>
-            <li><strong>Hypothèses de SHAP :</strong> La méthode d'explicabilité suppose que les caractéristiques sont indépendantes, ce qui n'est pas vrai pour les données séquentielles</li>
-            <li><strong>Artéfacts potentiels :</strong> L'IA pourrait avoir détecté des artéfacts computationnels plutôt que de véritables différences mathématiques</li>
-          </ul>
-        </div>
-
-        <p>Les travaux futurs pourraient explorer :</p>
-        <ul>
-          <li>Le test avec différentes plages de zéros de Riemann (en particulier des valeurs beaucoup plus élevées)</li>
-          <li>L'utilisation de différentes tailles de matrices quantiques</li>
-          <li>L'exploration d'architectures de réseaux de neurones plus sophistiquées</li>
-          <li>L'étude de la persistance des motifs pour d'autres types de matrices aléatoires</li>
-        </ul>
-
-        <p>Ce projet représente une exploration initiale plutôt qu'une réponse définitive. L'aspect le plus excitant est qu'il ouvre de nouvelles questions sur la relation entre la physique quantique et la théorie des nombres.</p>
-      </div>
-    </div>
-
-    <div class="content-section">
-      <h2>
-        <span class="en">6. Try It Yourself</span>
-        <span class="fr">6. Essayez vous-même</span>
-      </h2>
-
-      <div class="en">
-        <p>Interested in exploring this project further? Here's how you can get involved:</p>
-
-        <div class="highlight-box">
-          <p><strong>Get the code:</strong></p>
-          <ul>
-            <li>Clone the repository: <code>git clone https://github.com/Thylane-ROSSI/v2-riemann.git</code></li>
-            <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
-          </ul>
-        </div>
-
-        <div class="highlight-box">
-          <p><strong>Key scripts:</strong></p>
-          <ul>
-            <li><code>generate_data.py</code>: Generate quantum matrices and process Riemann zeros</li>
-            <li><code>train_model.py</code>: Train the neural network</li>
-            <li><code>explain_shap.py</code>: Generate explainability visualizations</li>
-          </ul>
-        </div>
-
-        <p>Whether you're a mathematician, physicist, or machine learning enthusiast, this project offers opportunities to explore the intersection of these fields.</p>
-      </div>
-
-      <div class="fr">
-        <p>Vous souhaitez explorer ce projet plus en détail ? Voici comment vous pouvez participer :</p>
-
-        <div class="highlight-box">
-          <p><strong>Obtenez le code :</strong></p>
-          <ul>
-            <li>Clonez le dépôt : <code>git clone https://github.com/Thylane-ROSSI/v2-riemann.git</code></li>
-            <li>Installez les dépendances : <code>pip install -r requirements.txt</code></li>
-          </ul>
-        </div>
-
-        <div class="highlight-box">
-          <p><strong>Scripts clés :</strong></p>
-          <ul>
-            <li><code>generate_data.py</code> : Génère des matrices quantiques et traite les zéros de Riemann</li>
-            <li><code>train_model.py</code> : Entraîne le réseau de neurones</li>
-            <li><code>explain_shap.py</code> : Génère des visualisations d'explicabilité</li>
-          </ul>
-        </div>
-
-        <p>Que vous soyez mathématicien, physicien ou passionné d'apprentissage automatique, ce projet offre des opportunités d'explorer l'intersection de ces domaines.</p>
+        <p><strong>Avons-nous résolu l'Hypothèse de Riemann ? Absolument pas.</strong></p>
+        <p>Ce projet est une observation empirique (statistique), et non une preuve mathématique. Cependant, il suggère fortement que la célèbre universalité de Wigner-Dyson (l'idée que les nombres premiers et la physique quantique sont identiques) commence à se briser lorsqu'on étudie de plus près les corrélations à 3 corps.</p>
+        <p>En pointant exactement où ces anomalies se produisent dans les séquences, le Machine Learning agit comme une véritable boussole pour les mathématiciens théoriciens, les guidant vers des équations qui auraient pu passer inaperçues.</p>
       </div>
     </div>
 
     <div class="content-section" style="background: #f8fafc; border: 1px solid #e2e8f0; box-shadow: none;">
       <h2>
-        <span class="en">7. References and Further Reading</span>
-        <span class="fr">7. Références et lectures complémentaires</span>
+        <span class="en">References & Documentation</span>
+        <span class="fr">Références & Bibliographie</span>
       </h2>
-
       <div class="en">
-        <p>This project builds on decades of research at the intersection of physics and mathematics. Here are some key references:</p>
-
-        <ul>
-          <li><strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
-          <li><strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank">Dataset</a>)</li>
-          <li><strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em>. Elsevier.</li>
-          <li><strong>Derbyshire, J. (2003).</strong> <em>Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics</em>. Joseph Henry Press.</li>
-        </ul>
-
-        <p>For those interested in the broader context of this work:</p>
-        <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Riemann_zeta_function" target="_blank">Wikipedia: Riemann Zeta Function</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Random_matrix" target="_blank">Wikipedia: Random Matrix Theory</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Montgomery%27s_pair_correlation_conjecture" target="_blank">Wikipedia: Montgomery's Pair Correlation Conjecture</a></li>
+        <ul style="list-style-type: none; margin-left: 0;">
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">High-Altitude Dataset Tables</a>)</li>
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
         </ul>
       </div>
-
       <div class="fr">
-        <p>Ce projet s'appuie sur des décennies de recherche à l'intersection de la physique et des mathématiques. Voici quelques références clés :</p>
-
-        <ul>
-          <li><strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
-          <li><strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank">Données</a>)</li>
-          <li><strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em>. Elsevier.</li>
-          <li><strong>Derbyshire, J. (2003).</strong> <em>Prime Obsession: Bernhard Riemann et le plus grand problème non résolu des mathématiques</em>. Joseph Henry Press.</li>
-        </ul>
-
-        <p>Pour ceux qui s'intéressent au contexte plus large de ce travail :</p>
-        <ul>
-          <li><a href="https://fr.wikipedia.org/wiki/Fonction_zêta_de_Riemann" target="_blank">Wikipédia : Fonction Zêta de Riemann</a></li>
-          <li><a href="https://fr.wikipedia.org/wiki/Matrice_aléatoire" target="_blank">Wikipédia : Théorie des matrices aléatoires</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Montgomery%27s_pair_correlation_conjecture" target="_blank">Wikipédia : Conjecture de corrélation par paires de Montgomery</a></li>
+        <ul style="list-style-type: none; margin-left: 0;">
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">Tables des zéros à haute altitude</a>)</li>
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+          <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
         </ul>
       </div>
     </div>
