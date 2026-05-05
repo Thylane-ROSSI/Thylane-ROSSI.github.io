@@ -11,7 +11,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riemann Oracle V2 - Thylane Rossi</title>
+  <title>Riemann Oracle - Thylane Rossi</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -171,16 +171,19 @@
   </style>
 </head>
 <body>
-  <header>
+<header>
     <a href="index.html" class="back-btn">
       <span class="en">← Back to Home</span>
       <span class="fr">← Retour à l'accueil</span>
     </a>
     <button id="langToggle" class="lang-btn">FR</button>
 
-    <h1>The Riemann-Dyson Experiment (V2)</h1>
-    <p class="en">Breaking Universality: Deep Learning at High Altitudes</p>
-    <p class="fr">Brisure d'Universalité : Le Deep Learning à très haute altitude</p>
+    <h1>
+      <span class="en">The Riemann-Dyson AI Oracle (V2)</span>
+      <span class="fr">The Riemann-Dyson AI Oracle (V2)</span>
+    </h1>
+    <p class="en">Universality Test & 3-Body Correlations</p>
+    <p class="fr">Test d'universalité & Corrélations à 3 corps</p>
   </header>
 
   <main>
@@ -210,13 +213,13 @@
       <div class="en">
         <p>In the 1970s, it was discovered that the spacing between prime numbers (via the Riemann Zeta zeros) perfectly mimics the energy levels of complex atoms (Quantum Chaos, simulated by GUE matrices). In my V1 project, an AI managed to tell them apart with 97% accuracy.</p>
         <p>But a massive scientific doubt remained: <strong>The Unfolding Bias.</strong></p>
-        <p>To compare these two worlds, mathematicians use a formula called "unfolding" to normalize the data. However, for the very first zeros of the Riemann function (the ones used in V1), this formula is only an approximation. It leaves a microscopic "calculation shadow".</p>
-        <p><em>The big question was:</em> Did the AI actually discover a fundamental difference between quantum physics and prime numbers, or did it just lazily detect this mathematical shadow?</p>
+        <p>To compare these two worlds, mathematicians use an "Unfolding" formula to normalize the data. However, for the very first zeros of the Riemann function (the ones used in V1), this formula is only an approximation. It leaves a microscopic shadow, a computational residue.</p>
+        <p>The big question was therefore to know whether the AI actually discovered a fundamental difference between quantum physics and prime numbers, or if it merely spotted this approximation error?</p>
       </div>
 
       <div class="fr">
         <p>Dans les années 1970, on a découvert que l'espacement entre les nombres premiers (via les zéros de Riemann) imitait parfaitement les niveaux d'énergie des atomes complexes (Chaos quantique, simulé par les matrices GUE). Dans mon projet V1, une IA a réussi à les différencier avec 97% de précision.</p>
-        <p>Mais un doute scientifique massif subsistait : <strong>Le biais de l'Unfolding.</strong></p>
+        <p>Mais un doute scientifique subsistait : <strong>Le biais de l'Unfolding.</strong></p>
         <p>Pour comparer ces deux mondes, on utilise une formule de l'Unfolding pour normaliser les données. Cependant, pour les tout premiers zéros de la fonction de Riemann (ceux utilisés en V1), cette formule n'est qu'une approximation. Elle laisse une ombre microscopique, un résidu de calcul.</p>
         <p>La grande question était donc de savoir si l'IA a-t-elle réellement découvert une différence fondamentale entre la physique quantique et les nombres premiers, ou s'est-elle contentée de repérer cette erreur d'approximation ?</p>
       </div>
@@ -233,8 +236,8 @@
 
         <div class="highlight-box">
           <ul>
-            <li><strong>1. Climbing to Extreme Altitudes (OOD Testing):</strong> We stopped using the first zeros. Instead, we used Andrew Odlyzko's `zeros6` tables, which represent zeros located at $T \approx 10^{20}$ (the 100 quintillionth zero). Up there, the unfolding formula is nearly flawless. The "shadow" disappears.</li>
-            <li><strong>2. From Pairs to Triplets ($C_3$ correlations):</strong> Looking at just two adjacent numbers wasn't enough. We shifted the AI's focus to 3-body correlations ($C_3$). Simply put, instead of looking at the distance between two trees, the AI now analyzes the rhythm of three consecutive gaps.</li>
+            <li><strong>1. Climbing to Extreme Altitudes (OOD Testing):</strong> We stopped using the first zeros. Instead, we used Andrew Odlyzko's `zeros6` tables, which contain zeros located around $T \approx 10^{20}$ (the 100 quintillionth zero). At this height, the Unfolding formula is nearly perfect. The calculation shadow disappears.</li>
+            <li><strong>2. From Pairs to Triplets ($C_3$ correlations):</strong> Looking at just two adjacent numbers wasn't enough. We forced the AI to analyze 3-body correlations ($C_3$). Simply put, instead of just measuring the distance between two consecutive zeros (gap A to B = gap 1), the AI now analyzes the "rhythm" of three successive gaps (A-B, B-C, C-D).</li>
           </ul>
         </div>
       </div>
@@ -258,12 +261,12 @@
       </h2>
 
       <div class="en">
-        <p>We trained a robust Neural Network on this new, ultra-pure dataset. <strong>The result: an AUC-ROC score of 0.9383.</strong> The AI could still confidently tell the difference between quantum randomness and prime numbers, proving it wasn't just a computational artifact!</p>
-        <p>But how does it do it? To find out, we used <strong>SHAP</strong> (Explainable AI) to visualize the AI's thought process. We asked it: <em>"In a sequence of 50 rhythmic gaps, where do you look to make your decision?"</em></p>
+        <p>We trained a robust Neural Network on this new, ultra-pure dataset directly on Google Colab (Feel free to test the code on Google Colab, here is the <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0;">link). <strong>The result: an AUC-ROC score of 0.9383.</strong> The AI still manages to tell the difference between quantum randomness and prime numbers with ~93% accuracy. It was therefore not a simple calculation bug in version 1.</p>
+        <p>To understand how it did this, we used <strong>SHAP</strong> (Explainable AI) to visualize the model's brain. We asked it: based on a sequence of 50 rhythms, where do you look to make your decision?</p>
       </div>
 
       <div class="fr">
-        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures directement sur Google Colab. <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers avec ~93% de précision. Il ne sagissait donc pas d'un simple bug de calcul dans la version 1.</p>
+        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures directement sur Google Colab (N'hésitez pas à tester le code sur Google Colab, voici le <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0;">lien</a>). <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers avec ~93% de précision. Il ne sagissait donc pas d'un simple bug de calcul dans la version 1.</p>
         <p>Pour comprendre comment elle a fait, nous avons utilisé <strong>SHAP</strong> (Une IA Explicable) pour visualiser le cerveau du modèle. Nous lui avons demandé, à partir d'une séquence de 50 rythmes, où regarde-t-elle pour prendre sa décision ?</p>
       </div>
 
@@ -299,8 +302,8 @@
       </h2>
 
       <div class="en">
-        <p>This project is an empirical observation, not a mathematical proof. However, it strongly suggests that the famous Wigner-Dyson universality (the idea that prime numbers and quantum physics are statistically identical) might break down when we look closely at higher-order, 3-body correlations.</p>
-        <p>By pointing exactly to where these anomalies occur, Machine Learning can act as a powerful compass for theoretical mathematicians and physicists, guiding them toward equations that might have been overlooked.</p>
+        <p>This project is an empirical (statistical) observation, not a mathematical proof. However, it strongly suggests that the famous Wigner-Dyson universality (the idea that prime numbers and quantum physics are identical) begins to break down when we study 3-body correlations more closely.</p>
+        <p>By pointing exactly to where these anomalies occur in the sequences, Machine Learning could act as a true compass for theoretical mathematicians, guiding them toward equations that might have gone unnoticed.</p>
       </div>
 
       <div class="fr">
