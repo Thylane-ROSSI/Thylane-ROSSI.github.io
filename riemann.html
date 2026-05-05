@@ -15,7 +15,14 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
@@ -187,7 +194,7 @@
 
     <div class="legacy-alert">
       <span class="en">
-        <strong>Note:</strong> This page presents <strong>Phase 2</strong> of my research project. It corrects a major epistemological flaw from the first version and introduces stricter mathematical constraints. To read about the exploratory phase (V1) and the basics of Random Matrix Theory, please <a href="riemann-v1.html">visit the V1 Archive</a>.
+        <strong>Note:</strong> This page presents <strong>Version 2</strong> of my research project. It corrects a major epistemological flaw from the first version and introduces stricter mathematical constraints. To read about the exploratory phase (V1) and the basics of Random Matrix Theory, please <a href="riemann-v1.html">visit the V1 Archive</a>.
       </span>
       <span class="fr">
         <strong>Note :</strong> Cette page présente la <strong>Version 2</strong> de mon projet de recherche. Elle corrige une faille épistémologique majeure de la première version. Pour découvrir la théorie initiale (V1) et les bases des matrices aléatoires, veuillez <a href="riemann-v1.html">consulter l'archive V1</a>.
@@ -209,9 +216,9 @@
 
       <div class="fr">
         <p>Dans les années 1970, on a découvert que l'espacement entre les nombres premiers (via les zéros de Riemann) imitait parfaitement les niveaux d'énergie des atomes complexes (Chaos quantique, simulé par les matrices GUE). Dans mon projet V1, une IA a réussi à les différencier avec 97% de précision.</p>
-        <p>Mais un doute scientifique massif subsistait : <strong>Le biais de dépliage (Unfolding Bias).</strong></p>
-        <p>Pour comparer ces deux mondes, on utilise une formule de "dépliage" pour normaliser les données. Cependant, pour les tout premiers zéros de la fonction de Riemann (ceux utilisés en V1), cette formule n'est qu'une approximation. Elle laisse une ombre microscopique, un résidu de calcul.</p>
-        <p><em>La grande question était :</em> L'IA a-t-elle réellement découvert une différence fondamentale entre la physique quantique et les nombres premiers, ou s'est-elle contentée de repérer cette erreur d'approximation ?</p>
+        <p>Mais un doute scientifique massif subsistait : <strong>Le biais de l'Unfolding.</strong></p>
+        <p>Pour comparer ces deux mondes, on utilise une formule de l'Unfolding pour normaliser les données. Cependant, pour les tout premiers zéros de la fonction de Riemann (ceux utilisés en V1), cette formule n'est qu'une approximation. Elle laisse une ombre microscopique, un résidu de calcul.</p>
+        <p>La grande question était donc de savoir si l'IA a-t-elle réellement découvert une différence fondamentale entre la physique quantique et les nombres premiers, ou s'est-elle contentée de repérer cette erreur d'approximation ?</p>
       </div>
     </div>
 
@@ -237,8 +244,8 @@
 
         <div class="highlight-box">
           <ul>
-            <li><strong>1. Monter à des altitudes extrêmes (Test OOD) :</strong> Nous avons arrêté d'utiliser les premiers zéros. À la place, nous avons utilisé les tables `zeros6` d'Andrew Odlyzko, qui contiennent des zéros situés autour de $T \approx 10^{20}$ (le cent trillionième zéro). À cette "hauteur", la formule de dépliage est quasi-parfaite. L'ombre de calcul disparaît.</li>
-            <li><strong>2. Passer des paires aux triplets (Corrélations $C_3$) :</strong> Regarder seulement deux nombres adjacents ne suffisait plus. Nous avons forcé l'IA à analyser les corrélations à 3 corps ($C_3$). En clair, au lieu de regarder la distance entre deux arbres, l'IA analyse désormais le "rythme" de trois écarts consécutifs.</li>
+            <li><strong>1. Monter à des altitudes extrêmes (Test OOD) :</strong> Nous avons arrêté d'utiliser les premiers zéros. À la place, nous avons utilisé les tables `zeros6` d'Andrew Odlyzko, qui contiennent des zéros situés autour de $T \approx 10^{20}$ (le cent trillionième zéro). À cette hauteur, la formule de l'Unfolding est quasi-parfaite. L'ombre de calcul disparaît.</li>
+            <li><strong>2. Passer des paires aux triplets (Corrélations $C_3$) :</strong> Regarder seulement deux nombres adjacents ne suffisait plus. Nous avons forcé l'IA à analyser les corrélations à 3 corps ($C_3$). En clair, au lieu de regarder la distance entre deux niveaux, l'IA analyse désormais le "rythme" de trois écarts consécutifs.</li>
           </ul>
         </div>
       </div>
@@ -256,16 +263,16 @@
       </div>
 
       <div class="fr">
-        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures. <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers. Preuve est faite qu'il ne s'agissait pas d'un simple bug de calcul !</p>
-        <p>Mais comment fait-elle ? Pour le savoir, nous avons utilisé <strong>SHAP</strong> (Une IA Explicable) pour visualiser le cerveau du modèle. Nous lui avons demandé : <em>"Dans une séquence de 50 rythmes, où regardes-tu pour prendre ta décision ?"</em></p>
+        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures directement sur Google Colab. <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers avec ~93% de précision. Il ne sagissait donc pas d'un simple bug de calcul dans la version 1.</p>
+        <p>Pour comprendre comment elle a fait, nous avons utilisé <strong>SHAP</strong> (Une IA Explicable) pour visualiser le cerveau du modèle. Nous lui avons demandé, à partir d'une séquence de 50 rythmes, où regarde-t-elle pour prendre sa décision ?</p>
       </div>
 
       <div class="graph-grid">
         <div class="graph-item">
           <img src="shap_global_importance.png" alt="Global Importance of C3 Triplets">
           <div class="graph-caption">
-            <span class="en">The AI acts like a sniper: it ignores the edges and focuses heavily on specific positions (e.g., pos 35 and 24).</span>
-            <span class="fr">L'IA agit comme un sniper : elle ignore les bords et se concentre violemment sur des positions spécifiques (ex: pos 35 et 24).</span>
+            <span class="en">The AI acts like a sniper: it ignores the edges and focuses on specific positions (e.g., pos 35 and 24).</span>
+            <span class="fr">L'IA agit comme un sniper : elle ignore les bords et se concentre sur des positions spécifiques (ex: pos 35 et 24).</span>
           </div>
         </div>
         <div class="graph-item">
@@ -292,15 +299,13 @@
       </h2>
 
       <div class="en">
-        <p><strong>Did we solve the Riemann Hypothesis? Absolutely not.</strong></p>
         <p>This project is an empirical observation, not a mathematical proof. However, it strongly suggests that the famous Wigner-Dyson universality (the idea that prime numbers and quantum physics are statistically identical) might break down when we look closely at higher-order, 3-body correlations.</p>
         <p>By pointing exactly to where these anomalies occur, Machine Learning can act as a powerful compass for theoretical mathematicians and physicists, guiding them toward equations that might have been overlooked.</p>
       </div>
 
       <div class="fr">
-        <p><strong>Avons-nous résolu l'Hypothèse de Riemann ? Absolument pas.</strong></p>
         <p>Ce projet est une observation empirique (statistique), et non une preuve mathématique. Cependant, il suggère fortement que la célèbre universalité de Wigner-Dyson (l'idée que les nombres premiers et la physique quantique sont identiques) commence à se briser lorsqu'on étudie de plus près les corrélations à 3 corps.</p>
-        <p>En pointant exactement où ces anomalies se produisent dans les séquences, le Machine Learning agit comme une véritable boussole pour les mathématiciens théoriciens, les guidant vers des équations qui auraient pu passer inaperçues.</p>
+        <p>En pointant exactement où ces anomalies se produisent dans les séquences, le Machine Learning pourrait agir comme une véritable boussole pour les mathématiciens théoriciens, les guidant vers des équations qui auraient pu passer inaperçues.</p>
       </div>
     </div>
 
