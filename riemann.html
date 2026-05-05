@@ -8,118 +8,122 @@
     gtag('js', new Date());
     gtag('config', 'G-YTRHSKVP06');
   </script>
-  
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Riemann Oracle V2 - Thylane Rossi</title>
+  <title>The Riemann-Dyson Experiment - Thylane Rossi</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
-  
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
-      color: #2d3748;
+      background-color: #f8f9fa;
+      color: #333;
       line-height: 1.7;
     }
     header {
-      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
       color: white;
-      padding: 3rem 2rem;
+      padding: 2.5rem 2rem;
       text-align: center;
-      position: relative;
     }
-    
     .back-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      display: inline-block;
+      margin-bottom: 1rem;
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      background: rgba(255,255,255,0.2);
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background 0.3s;
+      font-size: 1rem;
     }
-    .back-btn:hover { background: rgba(255,255,255,0.4); }
-
+    .back-btn:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
     .lang-btn {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      color: #1a365d;
-      background: white;
-      border: none;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
       cursor: pointer;
-      transition: background 0.3s;
     }
-    .lang-btn:hover { background: #e2e8f0; }
-    
-    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.85; }
-    
-    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
-    
+    .lang-btn:hover { background: rgba(255, 255, 255, 0.3); }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
     .action-bar {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-      margin-top: -1rem;
+      margin-bottom: 2rem;
     }
     .btn {
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
       text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: inline-block;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    .btn:hover { transform: translateY(-2px); }
     .btn-git {
-      background: #2d3748;
+      background-color: #333;
       color: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+    .btn-git:hover { background-color: #555; }
 
     .legacy-alert {
-      background: #ebf8ff;
-      border-left: 5px solid #3182ce;
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1rem;
       margin-bottom: 2rem;
-      font-size: 0.95rem;
+      border-radius: 4px;
     }
     .legacy-alert a {
-      color: #2b6cb0;
-      font-weight: bold;
-      text-decoration: underline;
+      color: #856404;
+      font-weight: 500;
     }
 
     .content-section {
       background: white;
       border-radius: 10px;
-      padding: 2.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       margin-bottom: 2rem;
     }
     .content-section h2 {
-      font-size: 1.5rem;
-      color: #2b6cb0;
-      border-bottom: 3px solid #2b6cb0;
-      padding-bottom: 0.4rem;
+      font-size: 1.6rem;
+      color: #2c3e50;
       margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #3498db;
     }
-    .content-section p, .content-section ul { margin-bottom: 1rem; }
-    .content-section ul { margin-left: 2rem; }
-    
+    .content-section p, .content-section ul {
+      margin-bottom: 1rem;
+    }
+    .content-section ul {
+      margin-left: 1.5rem;
+    }
+    .content-section li {
+      margin-bottom: 0.5rem;
+    }
+
     .graph-grid {
       display: flex;
       gap: 1.5rem;
@@ -134,160 +138,465 @@
     .graph-item img {
       width: 100%;
       border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      margin-bottom: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .graph-caption { font-size: 0.9rem; color: #718096; font-style: italic; }
+    .graph-caption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .highlight-box {
+      background-color: #f0f7ff;
+      border-left: 4px solid #3498db;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
 
     .fr { display: none; }
     body.lang-fr .en { display: none; }
     body.lang-fr .fr { display: block; }
-    span.fr { display: none; }
-    body.lang-fr span.fr { display: inline; }
+
+    @media (max-width: 768px) {
+      header { padding: 2rem 1rem; }
+      h1 { font-size: 1.8rem; }
+      .subtitle { font-size: 1rem; }
+      main { padding: 0 1rem; }
+    }
   </style>
 </head>
 <body>
-
-<header>
-  <a href="index.html" class="back-btn">
-    <span class="en">← Home</span>
-    <span class="fr">← Accueil</span>
-  </a>
-  <button id="langToggle" class="lang-btn">FR</button>
-  
-  <h1>The Riemann-Dyson AI Oracle (V2)</h1>
-  <p class="en">Out-Of-Distribution Testing & 3-Body Correlations</p>
-  <p class="fr">Test d'Universalité Out-Of-Distribution & Corrélations à 3 corps</p>
-</header>
-
-<main>
-  
-  <div class="action-bar">
-    <a href="https://github.com/Thylane-ROSSI/v2-riemann" target="_blank" class="btn btn-git">
-      <span class="en">📂 View Git Repository (V2)</span>
-      <span class="fr">📂 Voir le dépôt Git (V2)</span>
+  <header>
+    <a href="index.html" class="back-btn">
+      <span class="en">← Back to Home</span>
+      <span class="fr">← Retour à l'accueil</span>
     </a>
-  </div>
+    <button id="langToggle" class="lang-btn">FR</button>
 
-  <div class="legacy-alert">
-    <span class="en"><strong>Note:</strong> This page details the Version 2 of the research project, introducing stricter mathematical constraints (high-altitude zeros). To read about the exploratory phase and the underlying theory of Random Matrices, please <a href="riemann-v1.html">visit the V1 Archive</a>.</span>
-    <span class="fr"><strong>Note :</strong> Cette page détaille la Version 2 du projet de recherche, introduisant des contraintes mathématiques plus strictes (zéros à haute altitude). Pour lire la phase exploratoire et la théorie fondamentale des matrices aléatoires, veuillez <a href="riemann-v1.html">consulter l'archive V1</a>.</span>
-  </div>
+    <h1>The Riemann-Dyson Experiment</h1>
+    <p class="subtitle en">Can AI tell the difference between quantum chaos and prime numbers?</p>
+    <p class="subtitle fr">Une intelligence artificielle peut-elle distinguer chaos quantique et nombres premiers ?</p>
+  </header>
 
-  <div class="content-section">
-    <h2>
-      <span class="en">1. Context: The Unfolding Bias Limitation</span>
-      <span class="fr">1. Contexte : La limite du biais de dépliage</span>
-    </h2>
-    <div class="en">
-      <p>The initial study (V1) achieved a 97% accuracy in differentiating Quantum Chaos (GUE) from Riemann zeros using a Multi-Layer Perceptron. However, a major epistemological critique remained: the <strong>asymptotic unfolding bias</strong>. Utilizing the first 100,000 zeros leaves a residual density footprint due to the approximation of the unfolding formula at low altitudes.</p>
-      <p>The central question driving Version 2 was therefore: <em>Did the neural network discover a genuine structural difference, or did it merely overfit on this computational artifact?</em></p>
-    </div>
-    <div class="fr">
-      <p>L'étude initiale (V1) a atteint une précision de 97% pour différencier le chaos quantique (GUE) des zéros de Riemann à l'aide d'un réseau de neurones. Cependant, une critique épistémologique majeure subsistait : le <strong>biais d'approximation asymptotique (unfolding bias)</strong>. L'utilisation des premiers 100 000 zéros laisse une empreinte résiduelle dans les données due à l'approximation mathématique aux basses altitudes.</p>
-      <p>La question centrale motivant la Version 2 était donc : <em>Le réseau a-t-il découvert une véritable différence structurelle, ou a-t-il simplement appris à détecter cet artefact de calcul ?</em></p>
-    </div>
-  </div>
-
-  <div class="content-section">
-    <h2>
-      <span class="en">2. Methodology: High-Altitude Zeros & $C_3$ Metric</span>
-      <span class="fr">2. Méthodologie : Zéros à haute altitude & Métrique $C_3$</span>
-    </h2>
-    <div class="en">
-      <p>To definitively prove the breakdown of universality, this repository implements two major constraints:</p>
-      <ul>
-        <li><strong>Out-Of-Distribution (OOD) Data:</strong> The validation dataset was sourced from Andrew Odlyzko's `zeros6` tables, containing zeros at extreme altitudes ($T \approx 10^{20}$). At this height, the unfolding approximation error is virtually non-existent.</li>
-        <li><strong>3-Body Correlations ($C_3$):</strong> While Wigner-Dyson universality holds perfectly for adjacent pairs, we shifted the analysis to sequences of triplets (three consecutive spacings) to evaluate medium-range structural dynamics.</li>
-      </ul>
-      <p>The model was trained on 5,000 high-dimensional random matrices ($N=1000$) against these high-altitude mathematical zeros.</p>
-    </div>
-    <div class="fr">
-      <p>Afin de prouver définitivement la brisure d'universalité, ce projet implémente deux contraintes majeures :</p>
-      <ul>
-        <li><strong>Données Out-Of-Distribution (OOD) :</strong> Le jeu de validation utilise la table `zeros6` d'Andrew Odlyzko, contenant des zéros à des altitudes extrêmes ($T \approx 10^{20}$). À ce niveau, l'erreur d'approximation du dépliage est virtuellement inexistante.</li>
-        <li><strong>Corrélations à 3 corps ($C_3$) :</strong> L'universalité de Wigner-Dyson fonctionnant parfaitement pour des paires adjacentes, l'analyse porte désormais sur des séquences de triplets pour évaluer la dynamique structurelle à moyenne portée.</li>
-      </ul>
-      <p>Le modèle a été entraîné sur 5 000 matrices aléatoires de grande dimension ($N=1000$) opposées à ces zéros mathématiques purs.</p>
-    </div>
-  </div>
-
-  <div class="content-section">
-    <h2>
-      <span class="en">3. Explainable AI & Resonance Patterns</span>
-      <span class="fr">3. IA Explicable & Motifs de Résonance</span>
-    </h2>
-    <div class="en">
-      <p>The updated model maintained a highly robust <strong>AUC-ROC score of 0.9383</strong> on the OOD dataset. This mathematically confirms that the differentiation is intrinsic to the sequences and not an unfolding artifact.</p>
-      <p>To understand the network's strategy, we utilized the SHAP (SHapley Additive exPlanations) library.</p>
-    </div>
-    <div class="fr">
-      <p>Le modèle a conservé un score **AUC-ROC robuste de 0.9383** sur le jeu de données OOD. Cela confirme mathématiquement que la différenciation est intrinsèque aux séquences et non liée au biais de dépliage.</p>
-      <p>Pour comprendre la stratégie du réseau, nous avons utilisé la bibliothèque d'explicabilité SHAP.</p>
+  <main>
+    <div class="action-bar">
+      <a href="https://github.com/Thylane-ROSSI/v2-riemann" target="_blank" class="btn btn-git">
+        <i class="fab fa-github"></i>
+        <span class="en">View Project on GitHub</span>
+        <span class="fr">Voir le projet sur GitHub</span>
+      </a>
     </div>
 
-    <div class="graph-grid">
-      <div class="graph-item">
-        <img src="shap_global_importance.png" alt="Global Importance of C3 Triplets">
-        <div class="graph-caption">
-          <span class="en">The model anchors its decision heavily on specific relative distances rather than a uniform distribution.</span>
-          <span class="fr">Le modèle ancre sa décision sur des distances relatives spécifiques plutôt que sur une répartition uniforme.</span>
-        </div>
+    <div class="legacy-alert">
+      <span class="en">
+        <strong>Note:</strong> This page presents the second phase of the research project, focusing on high-altitude zeros of the Riemann Zeta function.
+        To explore the initial theory and foundational work, please <a href="riemann-v1.html">visit the first version</a>.
+      </span>
+      <span class="fr">
+        <strong>Note :</strong> Cette page présente la deuxième phase du projet de recherche, centrée sur les zéros de haute altitude de la fonction Zêta de Riemann.
+        Pour découvrir la théorie initiale et les travaux fondateurs, consultez <a href="riemann-v1.html">la première version</a>.
+      </span>
+    </div>
+
+    <div class="content-section">
+      <h2>
+        <span class="en">1. The Big Question</span>
+        <span class="fr">1. La grande question</span>
+      </h2>
+
+      <div class="en">
+        <p>In the 1970s, physicists and mathematicians discovered something astonishing: the energy levels of heavy atoms and the zeros of the Riemann Zeta function (which govern prime numbers) follow the same statistical patterns. This connection, known as the Montgomery-Dyson conjecture, suggests a deep link between quantum physics and number theory.</p>
+
+        <p>But here's the catch: while these patterns look identical in theory, could there be subtle differences that only a machine can detect?</p>
+
+        <p>This project explores whether artificial intelligence can distinguish between:</p>
+        <ul>
+          <li><strong>Quantum chaos:</strong> Simulated energy levels of heavy atoms (using random matrices)</li>
+          <li><strong>Mathematical chaos:</strong> The zeros of the Riemann Zeta function (related to prime numbers)</li>
+        </ul>
+
+        <p>If successful, this could open new avenues for understanding both quantum systems and the distribution of prime numbers.</p>
       </div>
-      <div class="graph-item">
-        <img src="shap_beeswarm.png" alt="Directional Impact Beeswarm Plot">
-        <div class="graph-caption">
-          <span class="en">The beeswarm plot demonstrates a complex, asymmetric decision boundary, highlighting non-linear resonance.</span>
-          <span class="fr">L'essaim (beeswarm) démontre une frontière de décision asymétrique, révélant une résonance non linéaire.</span>
-        </div>
+
+      <div class="fr">
+        <p>Dans les années 1970, physiciens et mathématiciens ont découvert quelque chose d'étonnant : les niveaux d'énergie des atomes lourds et les zéros de la fonction Zêta de Riemann (qui régissent les nombres premiers) suivent les mêmes motifs statistiques. Cette connexion, connue sous le nom de conjecture de Montgomery-Dyson, suggère un lien profond entre la physique quantique et la théorie des nombres.</p>
+
+        <p>Mais voici le défi : bien que ces motifs semblent identiques en théorie, pourrait-il exister des différences subtiles que seule une machine peut détecter ?</p>
+
+        <p>Ce projet explore si une intelligence artificielle peut distinguer :</p>
+        <ul>
+          <li><strong>Le chaos quantique :</strong> Les niveaux d'énergie simulés d'atomes lourds (en utilisant des matrices aléatoires)</li>
+          <li><strong>Le chaos mathématique :</strong> Les zéros de la fonction Zêta de Riemann (liés aux nombres premiers)</li>
+        </ul>
+
+        <p>Si ce projet aboutit, il pourrait ouvrir de nouvelles pistes pour comprendre à la fois les systèmes quantiques et la distribution des nombres premiers.</p>
       </div>
     </div>
 
-    <div class="en">
-      <p style="margin-top: 1.5rem;"><strong>Conclusion:</strong> The SHAP summary plots reveal that the neural network does not rely on a global statistical divergence. Instead, it identifies non-linear resonance patterns at specific relative distances within the sequence window. This empirical evidence strongly suggests that the universality between Quantum Chaos and the Riemann Zeta function breaks down when sequentially observing 3-body dynamics.</p>
-    </div>
-    <div class="fr">
-      <p style="margin-top: 1.5rem;"><strong>Conclusion :</strong> Les graphiques SHAP révèlent que le réseau de neurones ne se base pas sur une divergence statistique globale. Au contraire, il identifie des motifs de résonance non linéaires à des distances relatives précises dans la fenêtre d'observation. Cette preuve empirique suggère fortement que l'universalité entre le chaos quantique et la fonction Zêta de Riemann se brise lors de l'observation séquentielle des dynamiques à 3 corps.</p>
-    </div>
-  </div>
+    <div class="content-section">
+      <h2>
+        <span class="en">2. How It Works: The Data</span>
+        <span class="fr">2. Comment ça marche : les données</span>
+      </h2>
 
-  <div class="content-section" style="background: #f8fafc; border: 1px solid #e2e8f0; box-shadow: none;">
-    <h2>
-      <span class="en">References & Documentation</span>
-      <span class="fr">Références & Bibliographie</span>
-    </h2>
-    <div class="en">
-      <ul style="list-style-type: none; margin-left: 0;">
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">Dataset Tables</a>)</li>
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
-      </ul>
+      <div class="en">
+        <p>To compare these two systems, we need to process their data in a special way called "unfolding". This technique normalizes the spacing between energy levels or zeros, allowing us to focus on their local patterns rather than their global distribution.</p>
+
+        <div class="highlight-box">
+          <p><strong>Quantum System (GUE):</strong></p>
+          <ul>
+            <li>We generate random matrices (1000×1000) filled with complex numbers</li>
+            <li>We extract their eigenvalues (which represent energy levels)</li>
+            <li>We apply unfolding to normalize the spacing between these levels</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Riemann Zeta Function:</strong></p>
+          <ul>
+            <li>We use precomputed zeros of the function (thanks to Andrew Odlyzko's work)</li>
+            <li>We apply a mathematical transformation to unfold these zeros</li>
+            <li>This gives us a sequence of normalized spacings similar to the quantum system</li>
+          </ul>
+        </div>
+
+        <p>After unfolding, both systems should theoretically look identical when we plot the distribution of their spacings. But do they really?</p>
+      </div>
+
+      <div class="fr">
+        <p>Pour comparer ces deux systèmes, nous devons traiter leurs données d'une manière spéciale appelée "dépliage". Cette technique normalise l'espacement entre les niveaux d'énergie ou les zéros, ce qui nous permet de nous concentrer sur leurs motifs locaux plutôt que sur leur distribution globale.</p>
+
+        <div class="highlight-box">
+          <p><strong>Système quantique (GUE) :</strong></p>
+          <ul>
+            <li>Nous générons des matrices aléatoires (1000×1000) remplies de nombres complexes</li>
+            <li>Nous extrayons leurs valeurs propres (qui représentent les niveaux d'énergie)</li>
+            <li>Nous appliquons le dépliage pour normaliser l'espacement entre ces niveaux</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Fonction Zêta de Riemann :</strong></p>
+          <ul>
+            <li>Nous utilisons des zéros pré-calculés de la fonction (grâce aux travaux d'Andrew Odlyzko)</li>
+            <li>Nous appliquons une transformation mathématique pour déplier ces zéros</li>
+            <li>Cela nous donne une séquence d'espacements normalisés similaire au système quantique</li>
+          </ul>
+        </div>
+
+        <p>Après le dépliage, les deux systèmes devraient théoriquement paraître identiques lorsque nous traçons la distribution de leurs espacements. Mais est-ce vraiment le cas ?</p>
+      </div>
+
+      <div class="graph-grid">
+        <div class="graph-item">
+          <img src="wigner_surmise.png" alt="Spacing distribution for quantum system">
+          <div class="graph-caption">
+            <span class="en">Spacing distribution for quantum system (GUE)</span>
+            <span class="fr">Distribution des espacements pour le système quantique (GUE)</span>
+          </div>
+        </div>
+        <div class="graph-item">
+          <img src="riemann_surmise.png" alt="Spacing distribution for Riemann zeros">
+          <div class="graph-caption">
+            <span class="en">Spacing distribution for Riemann zeros</span>
+            <span class="fr">Distribution des espacements pour les zéros de Riemann</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="en">
+        <p>These graphs show the distribution of spacings after unfolding. At first glance, they look identical - both show "level repulsion" where spacings tend to avoid being too small. But could there be hidden patterns in the sequences of these spacings?</p>
+      </div>
+      <div class="fr">
+        <p>Ces graphiques montrent la distribution des espacements après dépliage. À première vue, ils semblent identiques - tous deux montrent une "répulsion de niveaux" où les espacements tendent à éviter d'être trop petits. Mais pourrait-il y avoir des motifs cachés dans les séquences de ces espacements ?</p>
+      </div>
     </div>
-    <div class="fr">
-      <ul style="list-style-type: none; margin-left: 0;">
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">Tables de données</a>)</li>
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
-        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
-      </ul>
+
+    <div class="content-section">
+      <h2>
+        <span class="en">3. The AI Approach</span>
+        <span class="fr">3. L'approche par IA</span>
+      </h2>
+
+      <div class="en">
+        <p>To test whether there are subtle differences between the two systems, we trained a neural network to distinguish between sequences of spacings from each source.</p>
+
+        <div class="highlight-box">
+          <p><strong>How the AI works:</strong></p>
+          <ul>
+            <li>Input: Sequences of 50 consecutive spacings</li>
+            <li>Output: Probability that the sequence comes from Riemann zeros (vs. quantum system)</li>
+            <li>Architecture: A simple neural network with two hidden layers (64 and 32 neurons)</li>
+            <li>Training: 5 epochs on balanced datasets from both systems</li>
+          </ul>
+        </div>
+
+        <p>The results were surprising: the AI achieved over 97% accuracy in distinguishing between the two systems. This suggests there are indeed subtle patterns that differentiate them.</p>
+
+        <div class="graph-item" style="max-width: 800px; margin: 2rem auto;">
+          <img src="training_curve.png" alt="Training progress of the neural network">
+          <div class="graph-caption">
+            <span class="en">Training progress showing high accuracy without overfitting</span>
+            <span class="fr">Progression de l'entraînement montrant une haute précision sans surapprentissage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fr">
+        <p>Pour tester s'il existe des différences subtiles entre les deux systèmes, nous avons entraîné un réseau de neurones à distinguer les séquences d'espacements provenant de chaque source.</p>
+
+        <div class="highlight-box">
+          <p><strong>Comment fonctionne l'IA :</strong></p>
+          <ul>
+            <li>Entrée : Séquences de 50 espacements consécutifs</li>
+            <li>Sortie : Probabilité que la séquence provienne des zéros de Riemann (vs. système quantique)</li>
+            <li>Architecture : Un réseau de neurones simple avec deux couches cachées (64 et 32 neurones)</li>
+            <li>Entraînement : 5 cycles sur des jeux de données équilibrés des deux systèmes</li>
+          </ul>
+        </div>
+
+        <p>Les résultats ont été surprenants : l'IA a atteint plus de 97% de précision dans la distinction entre les deux systèmes. Cela suggère qu'il existe bien des motifs subtils qui les différencient.</p>
+
+        <div class="graph-item" style="max-width: 800px; margin: 2rem auto;">
+          <img src="training_curve.png" alt="Progression de l'entraînement du réseau de neurones">
+          <div class="graph-caption">
+            <span class="en">Training progress showing high accuracy without overfitting</span>
+            <span class="fr">Progression de l'entraînement montrant une haute précision sans surapprentissage</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
 
-<script>
-  const langToggle = document.getElementById('langToggle');
-  const body = document.body;
+    <div class="content-section">
+      <h2>
+        <span class="en">4. What the AI Discovered</span>
+        <span class="fr">4. Ce que l'IA a découvert</span>
+      </h2>
 
-  langToggle.addEventListener('click', () => {
-    if (body.classList.contains('lang-fr')) {
-      body.classList.remove('lang-fr');
-      langToggle.textContent = 'FR'; 
-    } else {
-      body.classList.add('lang-fr');
-      langToggle.textContent = 'EN'; 
-    }
-  });
-</script>
+      <div class="en">
+        <p>To understand what patterns the AI was using to make its decisions, we used a technique called SHAP (SHapley Additive exPlanations). This method helps us see which parts of the input sequences were most important for the AI's predictions.</p>
 
+        <div class="graph-grid">
+          <div class="graph-item">
+            <img src="shap_global_importance.png" alt="Global importance of different positions in the sequence">
+            <div class="graph-caption">
+              Global importance of different positions in the 50-spacing sequence
+            </div>
+          </div>
+          <div class="graph-item">
+            <img src="shap_beeswarm.png" alt="Directional impact of spacing values on predictions">
+            <div class="graph-caption">
+              How spacing values influence the AI's predictions (red = Riemann, blue = GUE)
+            </div>
+          </div>
+        </div>
+
+        <p>The SHAP analysis revealed several interesting findings:</p>
+
+        <div class="highlight-box">
+          <p><strong>Key discoveries:</strong></p>
+          <ul>
+            <li><strong>Central positions matter most:</strong> The AI focused on positions 18-35 in the 50-spacing sequences, ignoring the edges</li>
+            <li><strong>Large spacings point to Riemann:</strong> When certain central positions had large spacing values, the AI was more likely to predict Riemann zeros</li>
+            <li><strong>Patterns in pairs and triplets:</strong> The AI seemed to look at relationships between nearby spacings, not just individual values</li>
+          </ul>
+        </div>
+
+        <p>These results suggest that while the overall spacing distributions look identical, there are subtle medium-range correlations that differ between the quantum system and Riemann zeros.</p>
+      </div>
+
+      <div class="fr">
+        <p>Pour comprendre quels motifs l'IA utilisait pour prendre ses décisions, nous avons utilisé une technique appelée SHAP (SHapley Additive exPlanations). Cette méthode nous aide à voir quelles parties des séquences d'entrée étaient les plus importantes pour les prédictions de l'IA.</p>
+
+        <div class="graph-grid">
+          <div class="graph-item">
+            <img src="shap_global_importance.png" alt="Importance globale des différentes positions dans la séquence">
+            <div class="graph-caption">
+              Importance globale des différentes positions dans la séquence de 50 espacements
+            </div>
+          </div>
+          <div class="graph-item">
+            <img src="shap_beeswarm.png" alt="Impact directionnel des valeurs d'espacement sur les prédictions">
+            <div class="graph-caption">
+              Comment les valeurs d'espacement influencent les prédictions de l'IA (rouge = Riemann, bleu = GUE)
+            </div>
+          </div>
+        </div>
+
+        <p>L'analyse SHAP a révélé plusieurs découvertes intéressantes :</p>
+
+        <div class="highlight-box">
+          <p><strong>Découvertes clés :</strong></p>
+          <ul>
+            <li><strong>Les positions centrales comptent le plus :</strong> L'IA s'est concentrée sur les positions 18-35 dans les séquences de 50 espacements, ignorant les bords</li>
+            <li><strong>Les grands espacements indiquent Riemann :</strong> Lorsque certaines positions centrales avaient de grandes valeurs d'espacement, l'IA était plus susceptible de prédire des zéros de Riemann</li>
+            <li><strong>Motifs par paires et triplets :</strong> L'IA semblait examiner les relations entre espacements voisins, pas seulement les valeurs individuelles</li>
+          </ul>
+        </div>
+
+        <p>Ces résultats suggèrent que bien que les distributions globales d'espacement semblent identiques, il existe des corrélations subtiles à moyenne portée qui diffèrent entre le système quantique et les zéros de Riemann.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>
+        <span class="en">5. Limitations and Future Work</span>
+        <span class="fr">5. Limites et perspectives</span>
+      </h2>
+
+      <div class="en">
+        <p>While these results are exciting, it's important to recognize the limitations of this study:</p>
+
+        <div class="highlight-box">
+          <p><strong>Key limitations:</strong></p>
+          <ul>
+            <li><strong>Data constraints:</strong> We used a specific range of Riemann zeros and a fixed size for our quantum matrices</li>
+            <li><strong>Unfolding imperfections:</strong> The unfolding process for Riemann zeros is an approximation that becomes more accurate at higher values</li>
+            <li><strong>SHAP assumptions:</strong> The explainability method assumes features are independent, which isn't true for sequential data</li>
+            <li><strong>Potential artifacts:</strong> The AI might have detected computational artifacts rather than true mathematical differences</li>
+          </ul>
+        </div>
+
+        <p>Future work could explore:</p>
+        <ul>
+          <li>Testing with different ranges of Riemann zeros (especially much higher values)</li>
+          <li>Using different sizes of quantum matrices</li>
+          <li>Exploring more sophisticated neural network architectures</li>
+          <li>Investigating whether the patterns hold for other types of random matrices</li>
+        </ul>
+
+        <p>This project represents an initial exploration rather than a definitive answer. The most exciting aspect is that it opens new questions about the relationship between quantum physics and number theory.</p>
+      </div>
+
+      <div class="fr">
+        <p>Bien que ces résultats soient passionnants, il est important de reconnaître les limites de cette étude :</p>
+
+        <div class="highlight-box">
+          <p><strong>Limites principales :</strong></p>
+          <ul>
+            <li><strong>Contraintes des données :</strong> Nous avons utilisé une plage spécifique de zéros de Riemann et une taille fixe pour nos matrices quantiques</li>
+            <li><strong>Imperfections du dépliage :</strong> Le processus de dépliage pour les zéros de Riemann est une approximation qui devient plus précise pour des valeurs plus élevées</li>
+            <li><strong>Hypothèses de SHAP :</strong> La méthode d'explicabilité suppose que les caractéristiques sont indépendantes, ce qui n'est pas vrai pour les données séquentielles</li>
+            <li><strong>Artéfacts potentiels :</strong> L'IA pourrait avoir détecté des artéfacts computationnels plutôt que de véritables différences mathématiques</li>
+          </ul>
+        </div>
+
+        <p>Les travaux futurs pourraient explorer :</p>
+        <ul>
+          <li>Le test avec différentes plages de zéros de Riemann (en particulier des valeurs beaucoup plus élevées)</li>
+          <li>L'utilisation de différentes tailles de matrices quantiques</li>
+          <li>L'exploration d'architectures de réseaux de neurones plus sophistiquées</li>
+          <li>L'étude de la persistance des motifs pour d'autres types de matrices aléatoires</li>
+        </ul>
+
+        <p>Ce projet représente une exploration initiale plutôt qu'une réponse définitive. L'aspect le plus excitant est qu'il ouvre de nouvelles questions sur la relation entre la physique quantique et la théorie des nombres.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>
+        <span class="en">6. Try It Yourself</span>
+        <span class="fr">6. Essayez vous-même</span>
+      </h2>
+
+      <div class="en">
+        <p>Interested in exploring this project further? Here's how you can get involved:</p>
+
+        <div class="highlight-box">
+          <p><strong>Get the code:</strong></p>
+          <ul>
+            <li>Clone the repository: <code>git clone https://github.com/Thylane-ROSSI/v2-riemann.git</code></li>
+            <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Key scripts:</strong></p>
+          <ul>
+            <li><code>generate_data.py</code>: Generate quantum matrices and process Riemann zeros</li>
+            <li><code>train_model.py</code>: Train the neural network</li>
+            <li><code>explain_shap.py</code>: Generate explainability visualizations</li>
+          </ul>
+        </div>
+
+        <p>Whether you're a mathematician, physicist, or machine learning enthusiast, this project offers opportunities to explore the intersection of these fields.</p>
+      </div>
+
+      <div class="fr">
+        <p>Vous souhaitez explorer ce projet plus en détail ? Voici comment vous pouvez participer :</p>
+
+        <div class="highlight-box">
+          <p><strong>Obtenez le code :</strong></p>
+          <ul>
+            <li>Clonez le dépôt : <code>git clone https://github.com/Thylane-ROSSI/v2-riemann.git</code></li>
+            <li>Installez les dépendances : <code>pip install -r requirements.txt</code></li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>Scripts clés :</strong></p>
+          <ul>
+            <li><code>generate_data.py</code> : Génère des matrices quantiques et traite les zéros de Riemann</li>
+            <li><code>train_model.py</code> : Entraîne le réseau de neurones</li>
+            <li><code>explain_shap.py</code> : Génère des visualisations d'explicabilité</li>
+          </ul>
+        </div>
+
+        <p>Que vous soyez mathématicien, physicien ou passionné d'apprentissage automatique, ce projet offre des opportunités d'explorer l'intersection de ces domaines.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>
+        <span class="en">7. References and Further Reading</span>
+        <span class="fr">7. Références et lectures complémentaires</span>
+      </h2>
+
+      <div class="en">
+        <p>This project builds on decades of research at the intersection of physics and mathematics. Here are some key references:</p>
+
+        <ul>
+          <li><strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+          <li><strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank">Dataset</a>)</li>
+          <li><strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em>. Elsevier.</li>
+          <li><strong>Derbyshire, J. (2003).</strong> <em>Prime Obsession: Bernhard Riemann and the Greatest Unsolved Problem in Mathematics</em>. Joseph Henry Press.</li>
+        </ul>
+
+        <p>For those interested in the broader context of this work:</p>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Riemann_zeta_function" target="_blank">Wikipedia: Riemann Zeta Function</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Random_matrix" target="_blank">Wikipedia: Random Matrix Theory</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Montgomery%27s_pair_correlation_conjecture" target="_blank">Wikipedia: Montgomery's Pair Correlation Conjecture</a></li>
+        </ul>
+      </div>
+
+      <div class="fr">
+        <p>Ce projet s'appuie sur des décennies de recherche à l'intersection de la physique et des mathématiques. Voici quelques références clés :</p>
+
+        <ul>
+          <li><strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+          <li><strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank">Données</a>)</li>
+          <li><strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em>. Elsevier.</li>
+          <li><strong>Derbyshire, J. (2003).</strong> <em>Prime Obsession: Bernhard Riemann et le plus grand problème non résolu des mathématiques</em>. Joseph Henry Press.</li>
+        </ul>
+
+        <p>Pour ceux qui s'intéressent au contexte plus large de ce travail :</p>
+        <ul>
+          <li><a href="https://fr.wikipedia.org/wiki/Fonction_zêta_de_Riemann" target="_blank">Wikipédia : Fonction Zêta de Riemann</a></li>
+          <li><a href="https://fr.wikipedia.org/wiki/Matrice_aléatoire" target="_blank">Wikipédia : Théorie des matrices aléatoires</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Montgomery%27s_pair_correlation_conjecture" target="_blank">Wikipédia : Conjecture de corrélation par paires de Montgomery</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('langToggle').addEventListener('click', function() {
+      document.body.classList.toggle('lang-fr');
+      this.textContent = document.body.classList.contains('lang-fr') ? 'EN' : 'FR';
+    });
+  </script>
 </body>
 </html>
