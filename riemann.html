@@ -248,7 +248,7 @@
         <div class="highlight-box">
           <ul>
             <li><strong>1. Monter à des altitudes extrêmes (Test OOD) :</strong> Nous avons arrêté d'utiliser les premiers zéros. À la place, nous avons utilisé les tables `zeros6` d'Andrew Odlyzko, qui contiennent des zéros situés autour de $T \approx 10^{20}$ (le cent trillionième zéro). À cette hauteur, la formule de l'Unfolding est quasi-parfaite. L'ombre de calcul disparaît.</li>
-            <li><strong>2. Passer des paires aux triplets (Corrélations $C_3$) :</strong> Regarder seulement deux nombres adjacents ne suffisait plus. Nous avons forcé l'IA à analyser les corrélations à 3 corps ($C_3$). En clair, au lieu de regarder la distance entre deux niveaux, l'IA analyse désormais le "rythme" de trois écarts consécutifs.</li>
+            <li><strong>2. Passer des paires aux triplets (Corrélations $C_3$) :</strong> Regarder seulement deux nombres adjacents ne suffisait plus. Nous avons forcé l'IA à analyser les corrélations à 3 corps ($C_3$). En clair, <span class="fr">En clair, au lieu de regarder seulement la distance entre deux zéros consécutifs (écart entre A et B), l'IA analyse désormais le "rythme" de trois écarts successifs (A-B, B-C, C-D).</li>
           </ul>
         </div>
       </div>
@@ -261,12 +261,15 @@
       </h2>
 
       <div class="en">
-        <p>We trained a robust Neural Network on this new, ultra-pure dataset directly on Google Colab (Feel free to test the code on Google Colab, here is the <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0;">link). <strong>The result: an AUC-ROC score of 0.9383.</strong> The AI still manages to tell the difference between quantum randomness and prime numbers with ~93% accuracy. It was therefore not a simple calculation bug in version 1.</p>
+        <p>We trained a robust Neural Network on this new, ultra-pure dataset directly on Google Colab. <strong>Leveraging Cloud GPU power</strong> was essential to generate and diagonalize thousands of high-dimensional GUE matrices ($N=1000$), a task that would be computationally prohibitive on standard hardware. <strong>The result: a robust AUC-ROC score of 0.9383.</strong></p>
+  <p>Feel free to test the code on Google Colab, here is the <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0; font-weight: bold;">link</a>.</p>
         <p>To understand how it did this, we used <strong>SHAP</strong> (Explainable AI) to visualize the model's brain. We asked it: based on a sequence of 50 rhythms, where do you look to make your decision?</p>
       </div>
 
       <div class="fr">
-        <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures directement sur Google Colab (N'hésitez pas à tester le code sur Google Colab, voici le <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0;">lien</a>). <strong>Le résultat : un score AUC-ROC de 0.9383.</strong> L'IA parvient toujours à faire la différence entre le hasard quantique et les nombres premiers avec ~93% de précision. Il ne sagissait donc pas d'un simple bug de calcul dans la version 1.</p>
+       <p>Nous avons entraîné un Réseau de Neurones robuste sur ces nouvelles données ultra-pures directement sur Google Colab. <strong>L'utilisation de la puissance de calcul d'un GPU Cloud</strong> a été cruciale pour générer et diagonaliser massivement des milliers de matrices GUE de grande dimension ($N=1000$), une tâche qui serait prohibitive sur un matériel standard. <strong>Le résultat : un score AUC-ROC de 0.9383.</strong></p>
+        <p>N'hésitez pas à tester le code sur Google Colab, voici le <a href="https://colab.research.google.com/drive/1lsc5m8b_ghd_MPx0Rt1KSJtQknlKi6PX?usp=sharing" target="_blank" style="color: #2b6cb0; font-weight: bold;">lien</a>.</p>
+      </div>
         <p>Pour comprendre comment elle a fait, nous avons utilisé <strong>SHAP</strong> (Une IA Explicable) pour visualiser le cerveau du modèle. Nous lui avons demandé, à partir d'une séquence de 50 rythmes, où regarde-t-elle pour prendre sa décision ?</p>
       </div>
 
