@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riemann Oracle V2 - Thylane Rossi</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♾️</text></svg>">
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #1a365d;
+      background: white;
+      border: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover { background: #e2e8f0; }
+    
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .action-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      margin-top: -1rem;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-git {
+      background: #2d3748;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .legacy-alert {
+      background: #ebf8ff;
+      border-left: 5px solid #3182ce;
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .legacy-alert a {
+      color: #2b6cb0;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    .content-section h2 {
+      font-size: 1.5rem;
+      color: #2b6cb0;
+      border-bottom: 3px solid #2b6cb0;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+    .content-section p, .content-section ul { margin-bottom: 1rem; }
+    .content-section ul { margin-left: 2rem; }
+    
+    .graph-grid {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .graph-item {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .graph-item img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 0.5rem;
+    }
+    .graph-caption { font-size: 0.9rem; color: #718096; font-style: italic; }
+
+    .fr { display: none; }
+    body.lang-fr .en { display: none; }
+    body.lang-fr .fr { display: block; }
+    span.fr { display: none; }
+    body.lang-fr span.fr { display: inline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-btn">
+    <span class="en">← Home</span>
+    <span class="fr">← Accueil</span>
+  </a>
+  <button id="langToggle" class="lang-btn">FR</button>
+  
+  <h1>The Riemann-Dyson AI Oracle (V2)</h1>
+  <p class="en">Out-Of-Distribution Testing & 3-Body Correlations</p>
+  <p class="fr">Test d'Universalité Out-Of-Distribution & Corrélations à 3 corps</p>
+</header>
+
+<main>
+  
+  <div class="action-bar">
+    <a href="https://github.com/Thylane-ROSSI/v2-riemann" target="_blank" class="btn btn-git">
+      <span class="en">📂 View Git Repository (V2)</span>
+      <span class="fr">📂 Voir le dépôt Git (V2)</span>
+    </a>
+  </div>
+
+  <div class="legacy-alert">
+    <span class="en"><strong>Note:</strong> This page details the Version 2 of the research project, introducing stricter mathematical constraints (high-altitude zeros). To read about the exploratory phase and the underlying theory of Random Matrices, please <a href="riemann-v1.html">visit the V1 Archive</a>.</span>
+    <span class="fr"><strong>Note :</strong> Cette page détaille la Version 2 du projet de recherche, introduisant des contraintes mathématiques plus strictes (zéros à haute altitude). Pour lire la phase exploratoire et la théorie fondamentale des matrices aléatoires, veuillez <a href="riemann-v1.html">consulter l'archive V1</a>.</span>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">1. Context: The Unfolding Bias Limitation</span>
+      <span class="fr">1. Contexte : La limite du biais de dépliage</span>
+    </h2>
+    <div class="en">
+      <p>The initial study (V1) achieved a 97% accuracy in differentiating Quantum Chaos (GUE) from Riemann zeros using a Multi-Layer Perceptron. However, a major epistemological critique remained: the <strong>asymptotic unfolding bias</strong>. Utilizing the first 100,000 zeros leaves a residual density footprint due to the approximation of the unfolding formula at low altitudes.</p>
+      <p>The central question driving Version 2 was therefore: <em>Did the neural network discover a genuine structural difference, or did it merely overfit on this computational artifact?</em></p>
+    </div>
+    <div class="fr">
+      <p>L'étude initiale (V1) a atteint une précision de 97% pour différencier le chaos quantique (GUE) des zéros de Riemann à l'aide d'un réseau de neurones. Cependant, une critique épistémologique majeure subsistait : le <strong>biais d'approximation asymptotique (unfolding bias)</strong>. L'utilisation des premiers 100 000 zéros laisse une empreinte résiduelle dans les données due à l'approximation mathématique aux basses altitudes.</p>
+      <p>La question centrale motivant la Version 2 était donc : <em>Le réseau a-t-il découvert une véritable différence structurelle, ou a-t-il simplement appris à détecter cet artefact de calcul ?</em></p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">2. Methodology: High-Altitude Zeros & $C_3$ Metric</span>
+      <span class="fr">2. Méthodologie : Zéros à haute altitude & Métrique $C_3$</span>
+    </h2>
+    <div class="en">
+      <p>To definitively prove the breakdown of universality, this repository implements two major constraints:</p>
+      <ul>
+        <li><strong>Out-Of-Distribution (OOD) Data:</strong> The validation dataset was sourced from Andrew Odlyzko's `zeros6` tables, containing zeros at extreme altitudes ($T \approx 10^{20}$). At this height, the unfolding approximation error is virtually non-existent.</li>
+        <li><strong>3-Body Correlations ($C_3$):</strong> While Wigner-Dyson universality holds perfectly for adjacent pairs, we shifted the analysis to sequences of triplets (three consecutive spacings) to evaluate medium-range structural dynamics.</li>
+      </ul>
+      <p>The model was trained on 5,000 high-dimensional random matrices ($N=1000$) against these high-altitude mathematical zeros.</p>
+    </div>
+    <div class="fr">
+      <p>Afin de prouver définitivement la brisure d'universalité, ce projet implémente deux contraintes majeures :</p>
+      <ul>
+        <li><strong>Données Out-Of-Distribution (OOD) :</strong> Le jeu de validation utilise la table `zeros6` d'Andrew Odlyzko, contenant des zéros à des altitudes extrêmes ($T \approx 10^{20}$). À ce niveau, l'erreur d'approximation du dépliage est virtuellement inexistante.</li>
+        <li><strong>Corrélations à 3 corps ($C_3$) :</strong> L'universalité de Wigner-Dyson fonctionnant parfaitement pour des paires adjacentes, l'analyse porte désormais sur des séquences de triplets pour évaluer la dynamique structurelle à moyenne portée.</li>
+      </ul>
+      <p>Le modèle a été entraîné sur 5 000 matrices aléatoires de grande dimension ($N=1000$) opposées à ces zéros mathématiques purs.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>
+      <span class="en">3. Explainable AI & Resonance Patterns</span>
+      <span class="fr">3. IA Explicable & Motifs de Résonance</span>
+    </h2>
+    <div class="en">
+      <p>The updated model maintained a highly robust <strong>AUC-ROC score of 0.9383</strong> on the OOD dataset. This mathematically confirms that the differentiation is intrinsic to the sequences and not an unfolding artifact.</p>
+      <p>To understand the network's strategy, we utilized the SHAP (SHapley Additive exPlanations) library.</p>
+    </div>
+    <div class="fr">
+      <p>Le modèle a conservé un score **AUC-ROC robuste de 0.9383** sur le jeu de données OOD. Cela confirme mathématiquement que la différenciation est intrinsèque aux séquences et non liée au biais de dépliage.</p>
+      <p>Pour comprendre la stratégie du réseau, nous avons utilisé la bibliothèque d'explicabilité SHAP.</p>
+    </div>
+
+    <div class="graph-grid">
+      <div class="graph-item">
+        <img src="shap_global_importance.png" alt="Global Importance of C3 Triplets">
+        <div class="graph-caption">
+          <span class="en">The model anchors its decision heavily on specific relative distances rather than a uniform distribution.</span>
+          <span class="fr">Le modèle ancre sa décision sur des distances relatives spécifiques plutôt que sur une répartition uniforme.</span>
+        </div>
+      </div>
+      <div class="graph-item">
+        <img src="shap_beeswarm.png" alt="Directional Impact Beeswarm Plot">
+        <div class="graph-caption">
+          <span class="en">The beeswarm plot demonstrates a complex, asymmetric decision boundary, highlighting non-linear resonance.</span>
+          <span class="fr">L'essaim (beeswarm) démontre une frontière de décision asymétrique, révélant une résonance non linéaire.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="en">
+      <p style="margin-top: 1.5rem;"><strong>Conclusion:</strong> The SHAP summary plots reveal that the neural network does not rely on a global statistical divergence. Instead, it identifies non-linear resonance patterns at specific relative distances within the sequence window. This empirical evidence strongly suggests that the universality between Quantum Chaos and the Riemann Zeta function breaks down when sequentially observing 3-body dynamics.</p>
+    </div>
+    <div class="fr">
+      <p style="margin-top: 1.5rem;"><strong>Conclusion :</strong> Les graphiques SHAP révèlent que le réseau de neurones ne se base pas sur une divergence statistique globale. Au contraire, il identifie des motifs de résonance non linéaires à des distances relatives précises dans la fenêtre d'observation. Cette preuve empirique suggère fortement que l'universalité entre le chaos quantique et la fonction Zêta de Riemann se brise lors de l'observation séquentielle des dynamiques à 3 corps.</p>
+    </div>
+  </div>
+
+  <div class="content-section" style="background: #f8fafc; border: 1px solid #e2e8f0; box-shadow: none;">
+    <h2>
+      <span class="en">References & Documentation</span>
+      <span class="fr">Références & Bibliographie</span>
+    </h2>
+    <div class="en">
+      <ul style="list-style-type: none; margin-left: 0;">
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">Dataset Tables</a>)</li>
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
+      </ul>
+    </div>
+    <div class="fr">
+      <ul style="list-style-type: none; margin-left: 0;">
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-database" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Odlyzko, A. M. (1987).</strong> On the distribution of spacings between zeros of the zeta function. <em>Mathematics of Computation</em>, 48(177), 273-308. (<a href="http://www.dtc.umn.edu/~odlyzko/zeta_tables/" target="_blank" style="color: #2b6cb0;">Tables de données</a>)</li>
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-book" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Montgomery, H. L. (1973).</strong> The pair correlation of zeros of the zeta function. <em>Analytic number theory</em>, 181-193.</li>
+        <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-atom" style="color: #2b6cb0; margin-right: 8px;"></i> <strong>Mehta, M. L. (2004).</strong> <em>Random matrices</em> (Vol. 142). Elsevier.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<script>
+  const langToggle = document.getElementById('langToggle');
+  const body = document.body;
+
+  langToggle.addEventListener('click', () => {
+    if (body.classList.contains('lang-fr')) {
+      body.classList.remove('lang-fr');
+      langToggle.textContent = 'FR'; 
+    } else {
+      body.classList.add('lang-fr');
+      langToggle.textContent = 'EN'; 
+    }
+  });
+</script>
+
+</body>
+</html>
