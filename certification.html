@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Learning Specialization - Thylane Rossi</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #1a365d;
+      background: white;
+      border: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover { background: #e2e8f0; }
+    
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; }
+    
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+    
+    .action-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      margin-top: -1rem;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-git {
+      background: #2d3748;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    
+    .course-title {
+      font-size: 1.4rem;
+      color: #1a365d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Badges pour l'état du cours */
+    .badge {
+      font-size: 0.85rem;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-obtained {
+      background: #c6f6d5;
+      color: #22543d;
+      border: 1px solid #9ae6b4;
+      transition: transform 0.2s;
+    }
+    .badge-obtained:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .badge-pending {
+      background: #edf2f7;
+      color: #4a5568;
+      border: 1px solid #cbd5e0;
+      cursor: default;
+    }
+
+    /* Tags de compétences (Repris de l'index) */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .skill-tag {
+      background: #ebf8ff;
+      color: #2b6cb0;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #bee3f8;
+    }
+
+    .course-desc { margin-bottom: 1rem; color: #4a5568; }
+
+    .fr { display: none; }
+    body.lang-fr .en { display: none; }
+    body.lang-fr .fr { display: block; }
+    span.fr { display: none; }
+    body.lang-fr span.fr { display: inline; }
+
+    @media (max-width: 768px) {
+      header { padding: 4rem 1rem 2rem 1rem; }
+      header h1 { font-size: 1.8rem; }
+      .course-title { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn">
+      <span class="en">← Home</span>
+      <span class="fr">← Accueil</span>
+    </a>
+    <button id="langToggle" class="lang-btn">FR</button>
+
+    <h1>
+      <span class="en">Deep Learning Specialization</span>
+      <span class="fr">Spécialisation Deep Learning</span>
+    </h1>
+    <p>Coursera & DeepLearning.AI — Andrew Ng</p>
+  </header>
+
+  <main>
+    
+    <div class="action-bar">
+      <a href="https://github.com/Thylane-ROSSI/Labs-Deep-Learning-Specialization" target="_blank" class="btn btn-git">
+        <i class="fab fa-github"></i>
+        <span class="en"> View Labs on GitHub</span>
+        <span class="fr"> Voir les Labs sur GitHub</span>
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span>Course 1: Neural Networks and Deep Learning</span>
+        <a href="https://www.coursera.org/account/accomplishments/verify/0AQXM9MCF9B2" target="_blank" class="badge badge-obtained">
+          <i class="fa-solid fa-check-circle"></i>
+          <span class="en">Certificate Obtained</span>
+          <span class="fr">Certificat Obtenu</span>
+        </a>
+      </div>
+      
+      <div class="course-desc">
+        <span class="en">In the first course, we study the foundational concept of neural networks and deep learning. The program covers the significant technological trends driving the rise of deep learning; building, training, and applying fully connected deep neural networks; implementing efficient (vectorized) neural networks; and identifying key parameters in a neural network’s architecture.</span>
+        <span class="fr">Ce premier cours couvre les concepts fondamentaux des réseaux de neurones. Le programme aborde la construction, l'entraînement et l'application de réseaux de neurones profonds entièrement connectés. Il inclut l'implémentation de réseaux vectorisés efficaces et l'identification des paramètres clés dans l'architecture d'un modèle.</span>
+      </div>
+
+      <div class="skill-tags">
+        <span class="skill-tag">Artificial Neural Networks</span>
+        <span class="skill-tag">Deep Learning</span>
+        <span class="skill-tag">Supervised Learning</span>
+        <span class="skill-tag">Applied Machine Learning</span>
+        <span class="skill-tag">Python Programming</span>
+        <span class="skill-tag">Model Optimization</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span>Course 2: Improving Deep Neural Networks</span>
+        <span class="badge badge-pending">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span class="en">In Progress</span>
+          <span class="fr">En cours</span>
+        </span>
+      </div>
+      
+      <div class="course-desc">
+        <span class="en">This course opens the deep learning black box to understand the processes that drive performance. It covers the best practices to develop test sets and analyze bias/variance. It introduces standard neural network techniques such as initialization, L2 and dropout regularization, hyperparameter tuning, batch normalization, and various optimization algorithms (Momentum, RMSprop, Adam) in TensorFlow.</span>
+        <span class="fr">Ce cours ouvre la boîte noire du Deep Learning pour comprendre les processus qui génèrent la performance. Il détaille les techniques de régularisation (L2, Dropout), le réglage des hyperparamètres, la normalisation par lots, l'analyse du biais/variance, ainsi que l'implémentation d'algorithmes d'optimisation (Momentum, RMSprop, Adam) via TensorFlow.</span>
+      </div>
+
+      <div class="skill-tags">
+        <span class="skill-tag">Hyperparameter Tuning</span>
+        <span class="skill-tag">Regularization</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">Performance Tuning</span>
+        <span class="skill-tag">Model Evaluation</span>
+        <span class="skill-tag">Debugging</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span>Course 3: Structuring Machine Learning Projects</span>
+        <span class="badge badge-pending">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span class="en">In Progress</span>
+          <span class="fr">En cours</span>
+        </span>
+      </div>
+      
+      <div class="course-desc">
+        <span class="en">This module focuses on building successful ML projects and practicing decision-making as a project leader. It teaches how to diagnose errors in a machine learning system, prioritize strategies for reducing errors, handle mismatched training/test sets, and apply advanced techniques like end-to-end learning, transfer learning, and multi-task learning.</span>
+        <span class="fr">Ce module se concentre sur la structuration de projets ML et la prise de décision en tant que leader technique. Il enseigne comment diagnostiquer les erreurs d'un système, prioriser les stratégies de réduction d'erreurs, gérer les jeux de données déséquilibrés, et appliquer des techniques avancées comme le Transfer Learning et l'apprentissage multi-tâches.</span>
+      </div>
+
+      <div class="skill-tags">
+        <span class="skill-tag">AI Product Strategy</span>
+        <span class="skill-tag">Decision Intelligence</span>
+        <span class="skill-tag">AI Workflows</span>
+        <span class="skill-tag">Transfer Learning</span>
+        <span class="skill-tag">Data-Driven Decision-Making</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span>Course 4: Convolutional Neural Networks</span>
+        <span class="badge badge-pending">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span class="en">In Progress</span>
+          <span class="fr">En cours</span>
+        </span>
+      </div>
+      
+      <div class="course-desc">
+        <span class="en">Focusing on computer vision evolution and applications (autonomous driving, face recognition). The course covers building convolutional neural networks (CNNs), including recent variations such as residual networks (ResNets). It also applies convolutional networks to visual detection/recognition tasks and neural style transfer.</span>
+        <span class="fr">Axé sur l'évolution de la vision par ordinateur (conduite autonome, reconnaissance faciale). Ce cours couvre la construction de réseaux de neurones convolutifs (CNN) et de réseaux résiduels (ResNets). Il inclut l'application de ces réseaux à des tâches de détection visuelle et au transfert de style neuronal.</span>
+      </div>
+
+      <div class="skill-tags">
+        <span class="skill-tag">Convolutional Neural Networks (CNN)</span>
+        <span class="skill-tag">Computer Vision</span>
+        <span class="skill-tag">Image Analysis</span>
+        <span class="skill-tag">Network Architecture</span>
+        <span class="skill-tag">TensorFlow</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span>Course 5: Sequence Models</span>
+        <span class="badge badge-pending">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <span class="en">In Progress</span>
+          <span class="fr">En cours</span>
+        </span>
+      </div>
+      
+      <div class="course-desc">
+        <span class="en">The final course covers sequence models and their applications such as speech recognition, chatbots, and NLP. It details how to build Recurrent Neural Networks (RNNs) and variants like GRUs and LSTMs. It also provides experience with Word Embeddings, HuggingFace tokenizers, and transformer models for solving complex NLP tasks.</span>
+        <span class="fr">Le cours final couvre les modèles de séquences et leurs applications (reconnaissance vocale, NLP). Il détaille la construction de réseaux de neurones récurrents (RNN, GRU, LSTM). Il offre également une expérience avec les Word Embeddings, les tokenizers de HuggingFace et les modèles Transformers pour les tâches complexes de NLP.</span>
+      </div>
+
+      <div class="skill-tags">
+        <span class="skill-tag">Recurrent Neural Networks (RNN)</span>
+        <span class="skill-tag">Natural Language Processing (NLP)</span>
+        <span class="skill-tag">Large Language Modeling</span>
+        <span class="skill-tag">Generative AI</span>
+        <span class="skill-tag">Hugging Face</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    const body = document.body;
+
+    langToggle.addEventListener('click', () => {
+      if (body.classList.contains('lang-fr')) {
+        body.classList.remove('lang-fr');
+        langToggle.textContent = 'FR'; 
+      } else {
+        body.classList.add('lang-fr');
+        langToggle.textContent = 'EN'; 
+      }
+    });
+  </script>
+
+</body>
+</html>
