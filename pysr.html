@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YTRHSKVP06"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YTRHSKVP06');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PySR Sequence Discovery - Thylane Rossi</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2d3748;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.4); }
+
+    .lang-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #1a365d;
+      background: white;
+      border: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-btn:hover { background: #e2e8f0; }
+    
+    header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
+    
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+
+    .btn-git {
+      background: #2d3748;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .btn-git:hover { transform: translateY(-2px); }
+
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+    }
+    
+    .course-title {
+      font-size: 1.4rem;
+      color: #1a365d;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      font-weight: bold;
+    }
+
+    .course-desc { margin-bottom: 1rem; color: #4a5568; }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .skill-tag {
+      background: #ebf8ff;
+      color: #2b6cb0;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #bee3f8;
+    }
+
+    .fr { display: none; }
+    body.lang-fr .en { display: none; }
+    body.lang-fr .fr { display: block; }
+    span.fr { display: none; }
+    body.lang-fr span.fr { display: inline; }
+
+    @media (max-width: 768px) {
+      header { padding: 4rem 1rem 2rem 1rem; }
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn">
+      <span class="en">← Home</span>
+      <span class="fr">← Accueil</span>
+    </a>
+    <button id="langToggle" class="lang-btn">FR</button>
+
+    <div style="font-size: 3.5rem; color: white; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+      <i class="fa-solid fa-chart-line"></i>
+    </div>
+
+    <h1>
+      <span class="en">PySR Sequence Discovery</span>
+      <span class="fr">Découverte de Suites avec PySR</span>
+    </h1>
+    <p style="margin-top: 10px;">
+      <span class="en">An experimental playground to test Symbolic Regression on mathematical sequences.</span>
+      <span class="fr">Un "bac à sable" expérimental pour tester la régression symbolique sur des suites mathématiques.</span>
+    </p>
+  </header>
+
+  <main>
+    <div style="text-align: center; margin-bottom: 3rem; margin-top: 1rem;">
+      <a href="https://github.com/Thylane-ROSSI/PySR-Sequence-Discovery" target="_blank" class="btn-git">
+        <i class="fab fa-github"></i>
+        <span class="en">View GitHub Repository</span>
+        <span class="fr">Voir le dépôt GitHub</span>
+      </a>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span class="en">Introduction & Project Goal</span>
+        <span class="fr">Introduction & Objectif du projet</span>
+      </div>
+      <div class="course-desc">
+        <span class="en">The goal is simply to learn how to use the <strong>PySR (Symbolic Regression)</strong> library. Instead of a neural network, PySR attempts to output human-readable mathematical formulas from raw data. Before trying it on complex problems like prime numbers, I am testing it on basic continuous and recursive sequences to see how the algorithm behaves.</span>
+        <span class="fr">L'objectif est simplement d'apprendre à manipuler la bibliothèque <strong>PySR (Symbolic Regression)</strong>. Contrairement à un réseau de neurones classique, PySR tente de générer des formules mathématiques lisibles par l'humain. Avant de l'essayer sur des problèmes complexes comme les nombres premiers, je le teste sur des suites simples pour comprendre son comportement.</span>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PySR</span>
+        <span class="skill-tag">Symbolic Regression</span>
+        <span class="skill-tag">Data Science</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span class="en">Phase 1: Continuous & Simple Sequences</span>
+        <span class="fr">Phase 1 : Suites Continues et Simples</span>
+      </div>
+      <div class="course-desc">
+        <span class="en">In this first phase, I tested the library on predictable environments. The objective was to learn how to tune the evolutionary hyperparameters and verify that the algorithm could recover a known polynomial formula. I also injected Gaussian noise into a trigonometric function to confirm that the model resists measurement errors and finds the underlying true law without overfitting.</span>
+        <span class="fr">Dans cette première phase, j'ai testé la bibliothèque sur des environnements prévisibles. L'objectif était d'apprendre à régler les hyperparamètres évolutifs et de vérifier que l'algorithme pouvait retrouver une formule polynomiale connue. J'ai également injecté du bruit gaussien dans une fonction trigonométrique pour confirmer que le modèle résiste aux erreurs de mesure sans faire de surapprentissage.</span>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-title">
+        <span class="en">Phase 2: Recursive Discrete Sequences</span>
+        <span class="fr">Phase 2 : Suites Discrètes Récursives</span>
+      </div>
+      <div class="course-desc">
+        <span class="en">Moving to the discrete world. By framing the data with a "Sliding Window" technique, I successfully taught the AI to depend on previous terms instead of absolute indices. The algorithm brilliantly rediscovered the Fibonacci sequence and other affine recursive relations from scratch.</span>
+        <span class="fr">Passage au monde discret. En formatant les données avec la technique de la "Fenêtre Glissante", j'ai pu apprendre à l'IA à dépendre des termes précédents plutôt que de l'indice absolu. L'algorithme a brillamment redécouvert la suite de Fibonacci et d'autres relations récursives affines à partir de zéro.</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    const body = document.body;
+
+    langToggle.addEventListener('click', () => {
+      if (body.classList.contains('lang-fr')) {
+        body.classList.remove('lang-fr');
+        langToggle.textContent = 'FR'; 
+      } else {
+        body.classList.add('lang-fr');
+        langToggle.textContent = 'EN'; 
+      }
+    });
+  </script>
+
+</body>
+</html>
