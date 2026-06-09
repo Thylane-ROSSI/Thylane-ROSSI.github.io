@@ -97,6 +97,23 @@
 
     .course-desc { margin-bottom: 1rem; color: #4a5568; }
 
+    /* Nouveau style pour les blocs d'exemples */
+    .example-block {
+      background: #f7fafc;
+      border-left: 4px solid #2b6cb0;
+      padding: 1rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .example-block code {
+      background: #edf2f7;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #c53030;
+      font-family: Consolas, Monaco, monospace;
+    }
+
     .skill-tags {
       display: flex;
       flex-wrap: wrap;
@@ -183,6 +200,16 @@
         <span class="en">In this first phase, I tested the library on predictable environments. The objective was to learn how to tune the evolutionary hyperparameters and verify that the algorithm could recover a known polynomial formula. I also injected Gaussian noise into a trigonometric function to confirm that the model resists measurement errors and finds the underlying true law without overfitting.</span>
         <span class="fr">Dans cette première phase, j'ai testé la bibliothèque sur des environnements prévisibles. L'objectif était d'apprendre à régler les hyperparamètres évolutifs et de vérifier que l'algorithme pouvait retrouver une formule polynomiale connue. J'ai également injecté du bruit gaussien dans une fonction trigonométrique pour confirmer que le modèle résiste aux erreurs de mesure sans faire de surapprentissage.</span>
       </div>
+      
+      <div class="example-block">
+        <strong><i class="fa-solid fa-flask"></i> <span class="en">Experiment:</span><span class="fr">Expérience :</span></strong><br>
+        <span class="en">Target law:</span><span class="fr">Loi cachée :</span> <code>y = x² + 2cos(x) - 1</code> (+ bruit/noise)<br>
+        <span class="en">PySR Output:</span><span class="fr">Résultat PySR :</span> <code>x0*x0 + cos(x0)*1.9978 - 0.9826</code><br>
+        <em style="font-size: 0.85rem; color: #718096; margin-top: 5px; display: inline-block;">
+          <span class="en">The algorithm successfully filtered out the noise to recover the exact structure of the equation.</span>
+          <span class="fr">L'algorithme a ignoré le bruit pour retrouver la structure exacte de l'équation.</span>
+        </em>
+      </div>
     </div>
 
     <div class="course-card">
@@ -193,6 +220,13 @@
       <div class="course-desc">
         <span class="en">Moving to the discrete world. By framing the data with a "Sliding Window" technique, I successfully taught the AI to depend on previous terms instead of absolute indices. The algorithm brilliantly rediscovered the Fibonacci sequence and other affine recursive relations from scratch.</span>
         <span class="fr">Passage au monde discret. En formatant les données avec la technique de la "Fenêtre Glissante", j'ai pu apprendre à l'IA à dépendre des termes précédents plutôt que de l'indice absolu. L'algorithme a brillamment redécouvert la suite de Fibonacci et d'autres relations récursives affines à partir de zéro.</span>
+      </div>
+
+      <div class="example-block">
+        <strong><i class="fa-solid fa-laptop-code"></i> <span class="en">Experiment:</span><span class="fr">Expérience :</span></strong><br>
+        <span class="en">Target sequence:</span><span class="fr">Suite cible :</span> Fibonacci (<code>U_n = U_n-1 + U_n-2</code>)<br>
+        <span class="en">Data shape:</span><span class="fr">Format des données :</span> <code>[x0, x1] -> [y]</code> (Sliding Window)<br>
+        <span class="en">PySR Output:</span><span class="fr">Résultat PySR :</span> <code>x0 + x1</code><br>
       </div>
     </div>
 
